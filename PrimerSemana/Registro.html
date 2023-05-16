@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red coyote</title>
+    <link rel="icon" href="..." type="image/...">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <Legend>Crear cuenta</Legend>
+            <label for="usuario">Usuario:
+                <input type="text" name="usuario" placeholder="no. de cuenta"/>
+            </label><br><br>
+            <label for="contraseña">Contraseña:
+                <input type="password" name="contraseña" placeholder="dd/mm/aaaa"/>
+            </label><br><br>
+            <label for="nombre">Nombre:
+                <input type="text" name="nombre">
+            </label><br><br>
+            <label for="genero">Género:</label>
+            <select name="genero" id="genero">
+                <optgroup label="Género">
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="otro">Prefiero no especificar</option>
+                </optgroup>
+            </select><br><br>
+            <label for="pronombre">Pronombres:
+                <input type="text" name="pronombre">
+            </label>
+        </fieldset>
+        <button type="submit">Crear cuenta</button>
+    </form>
+</body>
+</html>
