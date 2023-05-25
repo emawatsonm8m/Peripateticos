@@ -1,0 +1,129 @@
+nav {
+    width: 40%;
+    height: 5%;
+    background-color: aquamarine;
+    overflow:auto;
+    position: absolute;
+    right:10%;
+}
+
+#ventas{
+    width:15%;
+    height: 70%;
+    background-color: red;
+    position: absolute;
+    left: 4%;
+    top: 15%;
+}
+#objetos_perdidos{
+    width:26%;
+    height: 70%;
+    background-color: red;
+    position: absolute;
+    left: 23%;
+    top: 15%;
+}
+#comunidad{
+    width:22%;
+    height: 70%;
+    background-color: red;
+    position: absolute;
+    left: 53%;
+    top: 15%;
+}
+#publicar{
+    width:17%;
+    height: 70%;
+    background-color: red;
+    position: absolute;
+    left: 79%;
+    top: 15%;
+}
+header{
+    width:20%;
+    height: 10%;
+    overflow:hidden;
+    background-color: royalblue;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+#noticias{
+    width: 90%;
+    height: 20%;
+    overflow: auto;
+    background-color: rgb(35, 194, 20);
+    display:flex;
+    flex-wrap: wrap;
+    place-content: space-around;
+    position: absolute;
+    left: 5%;
+    top: 25%;
+}
+.noticias{
+    width: 10%;
+    height: 80%;
+    background-color: black;
+}
+#objetivo{
+    height: 7%;
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 52%;
+    background-color: rgb(0, 0, 0);
+}
+#objetivo p{
+    position: absolute;
+    top:-100%;
+    left:45%;
+    color: rgb(224, 77, 200);
+}
+#chat_general{
+    width: 55%;
+    height: 30%;
+    position: absolute;
+    left: 5%;
+    top: 67%;
+    background-color: darkred;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#chat_general p{
+    color: hotpink;
+}
+.mensaje{
+    width: 90%;
+    height: 30%;
+    background-color: paleturquoise;
+}
+#fechas{
+    width: 35%;
+    height: 35%;
+    background-color: crimson;
+    position: absolute;
+    right: 3%;
+    top: 67%;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content:space-between;
+}
+.fechas{
+    width: 17%;
+    height: 17%;
+    background-color: rgb(255, 0, 200);
+}
+#fechas p{
+    position: absolute;
+    left: 40%;
+    top: -20%;
+    color: violet;
+}
