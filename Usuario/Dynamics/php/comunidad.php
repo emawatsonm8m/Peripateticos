@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidad</title>
     <link rel="stylesheet" href="../../Statics/styles/pagPrincipales.css">
+    <link rel="stylesheet" href="../../Statics/styles/navs.css">
 </head>
 <body>
     <nav>
@@ -20,10 +21,10 @@
             <img src="../../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM">
         </section>
         <section class="pags">
-            <article class="pagRedireccion">Pagina principal</article>
-            <article class="pagRedireccion">Ventas</article>
-            <article class="pagRedireccion">Objetos perdidos</article>
-            <article class="fotoUsuario"><!--Foto de usuario BD--></article>
+            <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+            <article class="pagRedireccion" id="ventas">Ventas</article>
+            <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
+            <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
         </section>
     </nav>
     <header>
@@ -52,5 +53,6 @@
             <!-- BD -->
         </aside>
     </main>
+    <script src="../js/navs.js"></script>
 </body>
 </html>

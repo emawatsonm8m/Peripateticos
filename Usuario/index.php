@@ -19,20 +19,18 @@
         <img src="./Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM">
     </header>
     <main>
-        <section class="forms">
-            <form action="./Dynamics/php/verifica.php" method="post">
-                <h1>Iniciar Sesion</h1>
-                <label for="usuario" class="input">Usuario
-                    <input type="text" name="usuario" placeholder="No. de cuenta"/>
-                </label>
-                <label for="contraseña" class="input">Contraseña: 
-                    <input type="password" name="contraseña" placeholder="dd/mm/aaaa"/>
-                </label>
-                <p class="text">Tu contraseña es tu fecha de nacimiento.</p>
-                <button type="submit">Iniciar sesion</button>
-                <p class="text">Si no tienes una cuenta, <a href="./Dynamics/php/registro.php">crea una.</a></p>
-            </form>
-        </section>
+        <form action="./Dynamics/php/verifica.php" method="post">
+            <h1>Iniciar Sesion</h1>
+            <label for="usuario" class="input">Usuario
+                <input type="text" name="usuario" placeholder="No. de cuenta" required/>
+            </label>
+            <label for="contraseña" class="input">Contraseña: 
+                <input type="password" name="contraseña" placeholder="dd/mm/aaaa" requiered/>
+            </label>
+            <p class="text">Tu contraseña es tu fecha de nacimiento.</p>
+            <button type="submit">Iniciar sesion</button>
+            <p class="text">Si no tienes una cuenta, <a href="./Dynamics/php/registro.php">crea una.</a></p>
+        </form>
     </main>    
 </body>
 </html>

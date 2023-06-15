@@ -8,14 +8,15 @@ header{
 img{
     height: 4em;
 }
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* = FORM
 --------------------------------------------- */
 form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
