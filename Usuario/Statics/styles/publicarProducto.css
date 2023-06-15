@@ -1,0 +1,154 @@
+header
+{
+    display: grid;
+    justify-content: center;
+    padding: 3rem;
+    margin:auto;
+
+}
+
+
+/* ================ FORM PRODUCTO ================ */
+
+/* ========= CLASES ========= */
+.col-7
+{
+    display:flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+.producto
+{
+    width: 80%;
+    height: 57rem;
+    background-color: rgb(234, 234, 234);
+    margin: 2rem;
+    border-radius: 15px;
+    display:grid;
+    justify-content: center;
+}
+
+.derecha
+{
+    display: flex;
+    justify-content: right;
+    margin-right: 5rem;
+}
+
+.down
+{
+    margin: 3rem;
+    display:flex;
+    justify-content: space-around;
+}
+
+
+/* ========= ID´S ========= */
+#default
+{
+    width: 46rem;
+    height: 20rem;
+}
+
+#imagenes
+{
+    margin: 2rem;
+
+}
+
+#img
+{
+    margin:auto;
+}
+
+#centrar
+{
+    text-align: center;
+}
+
+#nombre
+{
+    margin: 1rem;
+    margin-top: 3rem;
+}
+
+#placeholder
+{
+    background-color: transparent;
+    text-align: center;
+    border-color: transparent;
+    font-size: 1.8rem;
+}
+
+#placeholder::placeholder
+{
+    text-align: center;
+}
+
+#Descripción
+{
+    text-align: left;
+    background-color: transparent;
+    border-color: rgb(93, 93, 93);
+}
+
+#transparent
+{
+    text-align: center;
+    background-color: transparent;
+    border-color: rgb(93, 93, 93);
+}
+
+
+#btn-publicar
+{
+    width:5.5rem;
+    height:2rem;
+    border-radius: 30px;
+    border-color:transparent;
+    background-color: rgb(87,150,186);
+    color: rgb(255,255,255);
+    align-self: right;
+}
+
+#btn-publicar:hover
+{
+    background-color: rgb(44, 118, 160);
+}
+
+
+/* ================ PUNTOS DE VENTA Y HORARIOS ================ */
+
+h3
+{
+    margin-top: 3rem;
+}
+
+
+
+.horarios
+{
+    width: 80%;
+    height: 30rem;
+    background-color: rgb(234, 234, 234);
+    margin: 2rem;
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+#mapa
+{
+    justify-self: center;
+    margin:1rem;
+    width: 38rem;
+    height: 18rem;
+    
+    
+}
+
+
+/* ======================== CALENDARIO ======================== */
