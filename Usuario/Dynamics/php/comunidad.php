@@ -42,9 +42,9 @@
         </aside>
 
         <section class="servidores">
-            <article class="portada">Foto de portada</article>
+            <article class="portada"></article>
             <article class="usuarioPortada"></article>
-            <article class="server" id="unirse">Unirme</article>
+            <article class="server" id="unirse">Unirme</article><!-- JS cuando se de click eliminar este boton -->
             <article class="datos">
                 <div>Nombre del servidor/club</div>
                 <div>Fecha de creacion y creador</div>
@@ -54,17 +54,15 @@
                 <div class="cuadros">Descripción: <br></div>
                 <div class="cuadros">Reglas: <br></div>
             </article>
-            <!-- BD -->
+            <article class="chat">
+                <div>Chat del servidor</div>
+                <div class="fulanitos"><!-- aparece al unirse, diseño, pero se implementara en js -->
+                    <!-- BD -->
+                    <div class="fotitos"></div>
+                    <div class="amigo">Nombre</div>
+                </div>
+            </article>
         </section>
-
-        <!-- <aside id="chats"> -->
-            <!-- <section class="encabezado">
-                <article class="titulos">Chat P6</article>
-            </section>
-            <input type="text" placeholder="Buscar...">
-            <section>Nombre:</section> -->
-            <!-- BD -->
-        <!-- </aside> -->
     </main>
     <script src="../js/navs.js"></script>
 </body>
