@@ -10,24 +10,25 @@ header{
 }
 main{
     display: flex;
+    min-height: 440px;
+    max-height: 440px;
 }
 
 /* = ASIDES
 --------------------------------------------- */
 aside{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1em;
     padding: 3%;
     width: 20%;
+    border-radius: 20px 0 0 20px;
     background-color: #D9D9D9;
 }
-#clubes{
-    border-radius: 20px 0 0 20px;
-}
-#chats{
+/* #chats{
     border-radius: 0 20px 20px 0;
-}
+} */
 .encabezado{
     display: flex;
     flex-direction: column;
@@ -56,14 +57,56 @@ input{
     color: #ffffff;
     background-color: #5796BA;
 }
+#crear{
+    position: absolute;
+    bottom: 5%;
+}
+#unirse{
+    margin: 0 3%;
+}
 
 /* = SERVIDORES
 --------------------------------------------- */
 .servidores{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: 3%;
-    width: 60%;
+    padding: 0.5%;
+    width: 80%;
+    border-radius: 0 20px 20px 0;
     background-color: #EAEAEA;
+}
+.portada{
+    height: 7.5em;
+    border-radius: 20px 20px 0 0;
+    background-color: #D6D6D6;
+}
+.usuarioPortada{
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: #BBBBBB;
+}
+.datos{
+    display: flex;
+    flex-direction: column;
+    padding: 0 3%;
+    gap: 0.5em;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+}
+.cuadros{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    width: 42.5%;
+    /* overflow: scroll; */
+    border-radius: 20px;
+    background-color: #D6D6D6;
 }

@@ -37,21 +37,34 @@
                 <article class="titulos">Tus clubes</article>
             </section>
             <input type="text" placeholder="Buscar...">
-            <!-- lo demas de aqui se haria con la BD -->
-            <section class="server">Crear server</section>
+            <!-- lo demas de aqui se haria con la BD y JS-->
+            <section class="server" id="crear">Crear server</section>
         </aside>
+
         <section class="servidores">
-            <article class="titulos">Servidores activos</article>
+            <article class="portada">Foto de portada</article>
+            <article class="usuarioPortada"></article>
+            <article class="server" id="unirse">Unirme</article>
+            <article class="datos">
+                <div>Nombre del servidor/club</div>
+                <div>Fecha de creacion y creador</div>
+                <div>Categoría</div>
+            </article>
+            <article class="info">
+                <div class="cuadros">Descripción: <br></div>
+                <div class="cuadros">Reglas: <br></div>
+            </article>
             <!-- BD -->
         </section>
-        <aside id="chats">
-            <section class="encabezado">
+
+        <!-- <aside id="chats"> -->
+            <!-- <section class="encabezado">
                 <article class="titulos">Chat P6</article>
             </section>
             <input type="text" placeholder="Buscar...">
-            <section>Nombre:</section>
+            <section>Nombre:</section> -->
             <!-- BD -->
-        </aside>
+        <!-- </aside> -->
     </main>
     <script src="../js/navs.js"></script>
 </body>
