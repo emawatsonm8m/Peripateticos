@@ -41,71 +41,22 @@ header{
     justify-content: center;
 }
 main{
-    display: flex;
-    background-color: #D9D9D9;
+    background-color: #ffffff;
     margin: auto;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    flex-flow:wrap;
+    width: 90%;
+    padding: 2%;
+    text-align: center;
 }
 
 /* = ASIDES
 --------------------------------------------- */
 aside{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding: 3%;
-    width: 20%;
+    display: block;
+    padding: 2%;
     background-color: #D9D9D9;
-}
-#clubes{
-    border-radius: 20px 0 0 20px;
-}
-#chats{
-    border-radius: 0 20px 20px 0;
-}
-.encabezado{
-    display: flex;
-    flex-direction: column;
-    gap: 0.3em;
-}
-.jDer{
-    text-align: end;
-}
-.titulos{
+    align-items: center;
     text-align: center;
-    font-size: 1.5em;
 }
-input{
-    height: 1.5rem;
-    padding: 3%;
-    border: none;
-    border-radius: 10px;
-    background-color: #ECECEC;
-}
-.server{
-    align-self: flex-end;
-    width: max-content;
-    padding: 0.5em 1em;
-    border-radius: 20px;
-    font-size: small;
-    color: #ffffff;
-    background-color: #5796BA;
-}
-
-/* = SERVIDORES
---------------------------------------------- */
-.servidores{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding: 3%;
-    width: 60%;
-    background-color: #EAEAEA;
-}
-
 /* = Botones
 -----------------------------------------------*/
 .boton{
@@ -122,10 +73,24 @@ h1{
     margin: auto;
     size: 20%;
 }
-/* = Divs
+
+/*Carrusel
 -----------------------------------------------*/
-div{
+.carrusel{
     display: flex;
-    margin: auto;
-    text-align: justify;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+.elemento{
+    flex: 1 0 auto;
+    margin: 0 50px;
+    background-color: #ffffff;
+    width: 20%;
+    height: 15rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.CARRUSEL{
+    background-color: #D9D9D9;
 }
