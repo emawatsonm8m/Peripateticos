@@ -1,3 +1,10 @@
+/* = FUENTES
+--------------------------------------------- */
+@font-face{
+    font-family: Roboto;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
 /* = NAV
 --------------------------------------------- */
 nav{
@@ -17,6 +24,8 @@ nav{
     gap: 2em;
 }
 .pagRedireccion{
+    font-family: 'Roboto';
+    font-size: 95%;
     display: flex;
     align-items: center;
     padding: 0.5em 1em;

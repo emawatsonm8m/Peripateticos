@@ -1,8 +1,8 @@
 <?php
-    // Si hay una sesion iniciada me redirige a ....
+    // Si hay una sesion iniciada me redirige a ...
     /*session_start();
     if(isset($_SESSION["usuario"])){
-        header('Location: ./Dynamics/php/...');
+        header('Location: ./...');
     }*/
 ?>
 <!DOCTYPE html>
@@ -22,42 +22,38 @@
         <form action="../../index.php" method="post">
             <h1>Crear cuenta</h1>
             <article class="input">
-                <input type="text" name="usuario" placeholder="No. de cuenta" required/>
-                <label for="usuario">
+                <input type="tel" name="user" minlength="9" maxlength="9" placeholder="                 No. de cuenta" required/>
+                <label for="user">
                     <p class="campo">Usuario:</p>
                 </label>
             </article>
             <article class="input">
-                <input type="password" name="contraseña" placeholder="dd/mm/aaaa" required/>
+                <input type="password" name="contraseña" minlength="8" placeholder="                      dd/mm/aaaa" required/>
                 <label for="contraseña">
                     <p class="campo">Contraseña:</p>
                 </label>
             </article>
             <article class="input">
-                <input type="text" name="nombre" required/>
-                <label for="usuario">
+                <input type="text" name="nombre" maxlength="20" required/>
+                <label for="nombre">
                     <p class="campo">Nombre:</p>
                 </label>
             </article>
-            <article class="input" id="select">
-                <select name="genero" id="genero">
-                    <option value="femenino">Femenino</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="otro">No especificar</option>
-                </select>
-                <label for="usuario">
-                    <p class="campo">Género</p>
+            <article class="input">
+                <input type="tel" name="celular" minlength="10" maxlength="10" required/>
+                <label for="celular">
+                    <p class="campo">Celular:</p>
                 </label>
             </article>
             <article class="input">
-                <input type="text" name="pronombre" required/>
-                <label for="usuario">
-                    <p class="campo">Pronombres:</p> 
+                <input type="text" name="instagram" maxlength="20" placeholder="                    @sigueme ;)" required/>
+                <label for="instagram">
+                    <p class="campo">Instagram:</p>
                 </label>
             </article>
-            <p class="text">Usa fecha de nacimiento como contraseña</p>
+            <article class="text">Usa fecha de nacimiento como contraseña</article>
             <button type="submit">Crear cuenta</button>
-            <p class="text">Si ya tienes una cuenta, <a href="../../index.php">inicia sesion.</a></p>
+            <article class="text" id="cambio">Si ya tienes una cuenta, <a href="../../index.php">inicia sesion.</a></article>
         </form>
     </main>    
 </body>
