@@ -21,12 +21,18 @@
     <main>
         <form action="./Dynamics/php/verifica.php" method="post">
             <h1>Iniciar Sesion</h1>
-            <label for="usuario" class="input">Usuario
+            <article class="input">
                 <input type="text" name="usuario" placeholder="No. de cuenta" required/>
-            </label>
-            <label for="contraseña" class="input">Contraseña: 
-                <input type="password" name="contraseña" placeholder="dd/mm/aaaa" requiered/>
-            </label>
+                <label for="usuario">
+                    <p class="campo">Usuario:</p>
+                </label>
+            </article>
+            <article class="input">
+                <input type="password" name="contraseña" placeholder="dd/mm/aaaa" required/>
+                <label for="contraseña">
+                    <p class="campo">Contraseña:</p>
+                </label>
+            </article>
             <p class="text">Tu contraseña es tu fecha de nacimiento.</p>
             <button type="submit">Iniciar sesion</button>
             <p class="text">Si no tienes una cuenta, <a href="./Dynamics/php/registro.php">crea una.</a></p>

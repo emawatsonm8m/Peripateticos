@@ -19,33 +19,46 @@
         <img src="../../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM">
     </header>
     <main>
-        <section class="forms">
-            <form action="../../index.php" method="post">
-                <h1>Crear cuenta</h1>
-                <label for="usuario" class="input">Usuario: 
-                    <input type="text" name="usuario" placeholder="No. de cuenta"/>
+        <form action="../../index.php" method="post">
+            <h1>Crear cuenta</h1>
+            <article class="input">
+                <input type="text" name="usuario" placeholder="No. de cuenta" required/>
+                <label for="usuario">
+                    <p class="campo">Usuario:</p>
                 </label>
-                <label for="contraseña" class="input">Contraseña: 
-                    <input type="password" name="contraseña" placeholder="dd/mm/aaaa"/>
+            </article>
+            <article class="input">
+                <input type="password" name="contraseña" placeholder="dd/mm/aaaa" required/>
+                <label for="contraseña">
+                    <p class="campo">Contraseña:</p>
                 </label>
-                <label for="usuario" class="input">Nombre: 
-                    <input type="text" name="nombre"/>
+            </article>
+            <article class="input">
+                <input type="text" name="nombre" required/>
+                <label for="usuario">
+                    <p class="campo">Nombre:</p>
                 </label>
-                <label for="usuario" class="input">Género:
-                    <select name="genero" id="genero">
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="otro">No especificar</option>
-                    </select>
+            </article>
+            <article class="input" id="select">
+                <select name="genero" id="genero">
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="otro">No especificar</option>
+                </select>
+                <label for="usuario">
+                    <p class="campo">Género</p>
                 </label>
-                <label for="usuario" class="input">Pronombres: 
-                    <input type="text" name="pronombre"/>
+            </article>
+            <article class="input">
+                <input type="text" name="pronombre" required/>
+                <label for="usuario">
+                    <p class="campo">Pronombres:</p> 
                 </label>
-                <p class="text">Usa fecha de nacimiento como contraseña</p>
-                <button type="submit">Crear cuenta</button>
-                <p class="text">Si ya tienes una cuenta, <a href="../../index.php">inicia sesion.</a></p>
-            </form>
-        </section>
+            </article>
+            <p class="text">Usa fecha de nacimiento como contraseña</p>
+            <button type="submit">Crear cuenta</button>
+            <p class="text">Si ya tienes una cuenta, <a href="../../index.php">inicia sesion.</a></p>
+        </form>
     </main>    
 </body>
 </html>
