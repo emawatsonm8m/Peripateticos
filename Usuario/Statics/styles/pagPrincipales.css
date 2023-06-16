@@ -1,10 +1,22 @@
 /* = FUENTES
 --------------------------------------------- */
-
+@font-face{
+    font-family: Infinity;
+    src: url('../fonts/Infinity/MADEINFINITY\ PERSONALUSE-Medium.otf');
+}
+@font-face{
+    font-family: LouisGeorge;
+    src: url('../fonts/LouisGeorgeCafe/Louis\ George\ Cafe.ttf');
+}
+@font-face{
+    font-family: Roboto;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
 
 /* = HEADER
 --------------------------------------------- */
 header{
+    font-family: 'Infinity';
     display: flex;
     justify-content: center;
 }
@@ -19,6 +31,7 @@ main{
 /* = ASIDES
 --------------------------------------------- */
 aside{
+    font-family: 'Roboto';
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,8 +50,9 @@ aside{
     text-align: end;
 }
 .titulos{
-    text-align: center;
+    font-family: 'LouisGeorge';
     font-size: 1.5em;
+    text-align: center;
 }
 input{
     height: 1.5rem;
@@ -67,6 +81,7 @@ input{
 /* = SERVIDORES
 --------------------------------------------- */
 .servidores{
+    font-family: 'Roboto';
     position: relative;
     display: flex;
     flex-direction: column;

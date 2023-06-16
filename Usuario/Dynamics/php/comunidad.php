@@ -40,7 +40,6 @@
             <!-- lo demas de aqui se haria con la BD y JS-->
             <section class="server" id="crear">Crear server</section>
         </aside>
-
         <section class="servidores">
             <article class="portada"></article>
             <article class="usuarioPortada"></article>
