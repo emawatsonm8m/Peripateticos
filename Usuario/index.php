@@ -19,20 +19,24 @@
         <img src="./Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM">
     </header>
     <main>
-        <section class="forms">
-            <form action="./Dynamics/php/verifica.php" method="post">
-                <h1>Iniciar Sesion</h1>
-                <label for="usuario" class="input">Usuario
-                    <input type="text" name="usuario" placeholder="No. de cuenta"/>
+        <form action="./Dynamics/php/verifica.php" method="post">
+            <h1>Iniciar Sesión</h1>
+            <article class="input">
+                <input type="tel" name="usuario" minlength="9" maxlength="9" placeholder="                 No. de cuenta" required/><!-- Espacio en placeholder es para que se vea bien -->
+                <label for="usuario">
+                    <p class="campo">Usuario:</p>
                 </label>
-                <label for="contraseña" class="input">Contraseña: 
-                    <input type="password" name="contraseña" placeholder="dd/mm/aaaa"/>
+            </article>
+            <article class="input">
+                <input type="password" name="contraseña" minlength="8" placeholder="                      dd/mm/aaaa" required/>
+                <label for="contraseña">
+                    <p class="campo">Contraseña:</p>
                 </label>
-                <p class="text">Tu contraseña es tu fecha de nacimiento.</p>
-                <button type="submit">Iniciar sesion</button>
-                <p class="text">Si no tienes una cuenta, <a href="./Dynamics/php/registro.php">crea una.</a></p>
-            </form>
-        </section>
+            </article>
+            <article class="text">Tu contraseña es tu fecha de nacimiento.</article>
+            <button type="submit">Iniciar sesion</button>
+            <article class="text" id="cambio">Si no tienes una cuenta, <a href="./Dynamics/php/registro.php">crea una.</a></article>
+        </form>
     </main>    
 </body>
 </html>
