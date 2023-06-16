@@ -20,15 +20,16 @@
             $name = $arch["name"];
             $ruta_temp = $arch["tmp_name"];
             $ext = pathinfo($name, PATHINFO_EXTENSION);
-            if(!file_exists('./img'))
+            if(!file_exists('../../Statics/img'))
             {
                 mkdir('../../Statics/img');
             }
-            $archivo =rename($ruta_temp, "./img/$nombre.$ext");
+            $nuevaRuta = "../../Statics/img/$name";
+            $archivo =rename($ruta_temp, $nuevaRuta);
         }
     // if($nombre==true && $arch==true && $descripcion==true && $costo==true && $fecha==true && $lugar==true && $hora==true)
     //{
-        $respuesta = array("nombre"=>$nombre, "archivo"=>$archivo, "descripcion"=>$descripcion, "costo"=>$costo, "fecha"=>$fecha, "lugar"=>$lugar, "hora"=>$hora);
+        $respuesta = array("nombre"=>$nombre, "archivo"=>$nuevaRuta, "descripcion"=>$descripcion, "costo"=>$costo, "fecha"=>$fecha, "lugar"=>$lugar, "hora"=>$hora);
         echo json_encode($respuesta);
         //mysqli_....
         // if(!$peticion)
