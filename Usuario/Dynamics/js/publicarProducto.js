@@ -6,8 +6,6 @@ window.addEventListener("load", () =>
     const formulario = document.getElementById("form-producto");
     const publicar = document.getElementById("btn-publicar");
 
-    console.log("tilin");
-
     /* Hace el prewiew de la imagen */
     imagen.addEventListener("change", e =>
     {
@@ -32,19 +30,102 @@ window.addEventListener("load", () =>
         }).then((respuesta)=>{
             return respuesta.json();
         }).then ((datosJSON)=>{
-            console.log(datosJSON.nombre);
-            console.log(datosJSON.archivo);
-            console.log(datosJSON.descripcion);
-            console.log(datosJSON.costo);
-            console.log(datosJSON.fecha);
-            console.log(datosJSON.lugar);
-            console.log(datosJSON.hora);
-            // imagen.addEventListener("change", e =>
-            // {
-            //     console.log(e.target.files[0]);
-            // });
+            // console.log(datosJSON.nombre);
+            // console.log(datosJSON.archivo);
+            // console.log(datosJSON.descripcion);
+            // console.log(datosJSON.costo);
+            // console.log(datosJSON.fecha);
+            // console.log(datosJSON.lugar);
+            // console.log(datosJSON.hora);
+            alert(datosJSON.mensaje);
         });
 
     })
 
+    /*Mapa interactivo*/
+    const mapa = document.getElementById("mapa");
+    const back = document.getElementById("btn-back");
+    const entrada = document.getElementById("Entrada");
+    const sextos = document.getElementById("PatioSextos");
+    const cuartos = document.getElementById("PatioCuartos");
+    const quintos = document.getElementById("PatioQuintos");
+    const pulpo = document.getElementById("Pulpo");
+    const mesas = document.getElementById("Mesas");
+    const canchas = document.getElementById("Canchas");
+    const biblio = document.getElementById("Biblio");
+    const pimpos = document.getElementById("Pimpos");
+    const h = document.getElementById("h");
+    const vestidores = document.getElementById("Vestidores");
+    const lugar = document.getElementById("lugar")
+    
+    back.addEventListener("click", () =>{
+        mapa.src = "../Statics/media/puntosPrepa/mapa.jpg";
+        lugar.value=("");
+    })
+
+    entrada.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/entrada.jpg";
+        lugar.value=("Entrada");
+    })
+
+    sextos.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/sextos.jpg";
+        lugar.value=("Patio de Sextos");
+    })
+
+    cuartos.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/cuartos.jpg";
+        lugar.value=("Patio de Cuartos");
+    })
+
+    quintos.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/quintos.jpg";
+        lugar.value=("Patio de Quintos");
+    })
+
+    pulpo.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/pulpo.jpg";
+        lugar.value=("Pulpo");
+    })
+
+    mesas.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/mesas.jpg";
+        lugar.value=("Mesas");
+    })
+
+    canchas.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/canchas.jpg";
+        lugar.value=("Canchas");
+    })
+
+    biblio.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/biblio.jpg";
+        lugar.value=("Biblioteca");
+    })
+
+    pimpos.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/pimpos.jpg";
+        lugar.value=("Pimponeras");
+    })
+
+    h.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/h.jpg";
+        lugar.value=("Los H");
+    })
+
+    vestidores.addEventListener("mouseover", (e)=>
+    {
+        mapa.src = "../Statics/media/puntosPrepa/vestidores.jpg";
+        lugar.value=("Vestidores");
+    })
 })

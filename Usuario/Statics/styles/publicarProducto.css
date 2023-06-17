@@ -128,9 +128,16 @@ h3
     margin-top: 2rem;
 }
 
+#lugar
+{
+    text-align: center;
+    background-color: transparent;
+    border-color: rgb(93, 93, 93);
+}
+
 .mapayhorarios
 {
-    margin: 2rem;
+    margin: 3rem;
     margin-top: 0rem;
     display:flex;
     justify-content: space-around;
@@ -140,16 +147,24 @@ h3
 {
     justify-self: center;
     margin:1rem;
-    width: 38rem;
-    height: 18rem;
-    
-    
+    margin-bottom: 0%;
+    background-color: aquamarine;
 }
 
-#mapa:hover
+#btn-back
 {
-    scale: 1.5;
-    cursor: url("../media/localizador-removebg-preview\ \(1\).png"), default;
+    width:5.5rem;
+    height:2rem;
+    border-radius: 30px;
+    border-color:transparent;
+    background-color: rgb(87,150,186);
+    color: rgb(255,255,255);
+    align-items: right;
+}
+
+#btn-back:hover
+{
+    background-color: rgb(44, 118, 160);
 }
 
 
@@ -186,7 +201,7 @@ h3
     margin-top: -1rem;
 }
 
-#ig
+#cel
 {
     width: 2rem;
     height: 2rem;
@@ -210,7 +225,7 @@ h3
     margin-left: 1.5rem;
 }
 
-#ig2
+#ig
 {
     width: 2rem;
     height: 2rem;
