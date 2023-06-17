@@ -5,6 +5,7 @@
     }
 
     require "config.php";
+    require "contraseña.php";
     $conexion = connect ();
 
     if(!$conexion){
@@ -15,17 +16,18 @@
     
         //si los dos datos llegan
         if($usuario && $contraseña){
-            $existe = "SELECT * FROM Usuario WHERE Cuenta = '$usuario'";
+            $existe = "SELECT * FROM usuario WHERE Cuenta = '$usuario'";
             $buscando = mysqli_query($conexion, $existe);
             if(mysqli_num_rows($buscando) == 0){        //verifica si existe un registro con ese usuario
                 echo "Ese usuario no existe";
             }else{
                 $sql = "SELECT Contraseña FROM Usuario WHERE Cuenta = '$usuario'";
-                $res = mysqli_query($conexion, $sql);
-                
-                // debemos hashear la contraseña ingesada en el inicio de sesion?
-                
-                if($res == $contraseña){        //verifica que la contraseña sea la misma
+                $correcta = mysqli_query($conexion, $sql);
+                $sql1 = "SELECT Sal FROM Usuario WHERE Cuenta = '$usuario'";
+                $sal = mysqli_query($conexion, $sql1);
+
+                $verificacion = verificarContra($contraseña, $correcta, $sal);
+                if($verificacion){        //verifica que la contraseña sea la misma
                     session_start();
                     $_SESSION["usuario"] = $usuario;
                     header('Location: ./Dynamics/php/...');
