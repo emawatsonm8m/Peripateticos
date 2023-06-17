@@ -1,6 +1,6 @@
 <?php
-    require "config.php";
-    require "contraseña.php";
+    require "./config.php";
+    require "./contraseña.php";
     $conexion = connect ();
 
     if(!$conexion){
@@ -22,7 +22,7 @@
             if(mysqli_num_rows($buscando) > 0){     // si ya existe ese usuario no volver a crear
                 echo "Ese usuario ya esta registrado";
             }else{      //se guarda en base de datos y redirige
-                $sql = "INSERT INTO usuario (Cuenta, Nombre, Contraseña, Instagram, Celular, Sal) VALUES ($user, '$nombre', '$contraHash', '$instagram', $celular, '$sal')";
+                $sql = "INSERT INTO usuario (Cuenta, Nombre, Contraseña, Instagram, Celular, Sal) VALUES ('$user', '$nombre', '$contraHash', '$instagram', '$celular', '$sal')";
                 $res = mysqli_query($conexion, $sql);
                 header('Location: ../../index.php');
             }
