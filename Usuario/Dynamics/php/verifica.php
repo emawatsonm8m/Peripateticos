@@ -1,4 +1,9 @@
 <?php
+    /*session_start();
+    if(isset($_SESSION["usuario"])){
+        header('Location: ./...');
+    }*/
+
     require "./config.php";
     require "./contraseña.php";
     $conexion = connect ();

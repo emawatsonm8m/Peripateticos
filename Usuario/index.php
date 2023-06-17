@@ -2,7 +2,7 @@
     // Si hay una sesion iniciada me redirige a ....
     /*session_start();
     if(isset($_SESSION["usuario"])){
-        header('Location: ./Dynamics/php/...');
+        header('Location: ./Dynamics/php/comunidad.php');
     }*/
 ?>
 <!DOCTYPE html>
