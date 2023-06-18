@@ -5,36 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="../Statics/styles/publicarProducto.css">
+    <link rel="stylesheet" href="../Statics/styles/navs.css">
     <title>Publicar Producto</title>
 </head>
 <body>
     <!-- NAV -->
-    <nav class="navbar bg-body-tertiary">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-      </nav>
+    <nav>
+      <section class="img">
+          <img src="../Statics/media/EscudoP6.jpg" alt="ENP6" id="prepa6">
+          <img src="../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM">
+      </section>
+      <section class="pags">
+          <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+          <article class="pagRedireccion" id="ventas">Ventas</article>
+          <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
+          <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
+          <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
+      </section>
+  </nav>
 
       <!-- Header -->
       <header><h1>Nuevo Producto</h1></header>
@@ -54,16 +42,16 @@
                           </div>
                       </div>
                       <div class="d-grid gap-2 col-10 mx-auto">
-                          <label id="Descripción">Descripción:</label>
+                          <label class="texto" id="Descripción">Descripción:</label>
                           <textarea class="form-control" id="Descripción" rows="3" name="descripcion" required></textarea>
                       </div>
                       <div class="down">
                           <div class="d-grid gap-2 col-2 mx-auto">
-                              <label>Costo:</label>
+                              <label class="texto">Costo:</label>
                               <input type="number" class="form-control" id="transparent" placeholder="$00.00" name="costo" required>
                           </div>
                           <div class="d-grid gap-2 col-3 mx-auto">
-                              <label>Fecha de inicio de venta:</label>
+                              <label class="texto">Fecha de inicio de venta:</label>
                               <input type="date" id="transparent" class="form-control" name="fecha" required>
                           </div>
                       </div>
@@ -92,7 +80,7 @@
                 </div>
                   <div class="mapayhorarios">
                         <div class="d-grid gap-2 col-5 mx-auto">
-                          <label>Lugar</label>
+                          <label class="texto">Lugar</label>
                             <select name="lugar" class="form-select" id="lugar" required>
                               <option disabled selected></option>
                               <option value="Entrada">Entrada</option>
@@ -109,7 +97,7 @@
                             </select>
                         </div>
                         <div class="d-grid gap-2 col-4 mx-auto">
-                          <label>Horario:</label>
+                          <label class="texto">Horario:</label>
                           <input type="time"  min="7:00" max="21:00" id="transparent" class="form-control" name="hora" required>
                         </div>
                   </div>
@@ -118,16 +106,17 @@
             <!-- Datos de Contacto -->
               <div class="contacto" id="centrar">
                 <h3>Datos de contacto</h3>
+                <div class="texto">Recuerda que tus datos de contacto son los que registraste en <a href="../perfil...">tu perfil</a>.</div>
                 <div id="celular">
                   <div id="content">
                     <img src="../Statics/media/publicarProducto/cel.png" class="img-fluid" id="cel">
-                    <div id="texto">55 </div>
+                    <div id="text">55 </div>
                   </div>
                 </div>
                 <div id="instagram">
                   <div id="content2">
                     <img src="../Statics/media/publicarProducto/ig.png" class="img-fluid" id="ig">
-                    <div id="texto">@</div>
+                    <div id="text">@</div>
                   </div>
                 </div>
               </div>

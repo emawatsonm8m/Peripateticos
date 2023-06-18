@@ -1,0 +1,152 @@
+/* = FUENTES
+--------------------------------------------- */
+@font-face{
+    font-family: Infinity;
+    src: url('../fonts/Infinity/MADEINFINITY\ PERSONALUSE-Medium.otf');
+}
+@font-face{
+    font-family: LouisGeorge;
+    src: url('../fonts/LouisGeorgeCafe/Louis\ George\ Cafe.ttf');
+}
+@font-face{
+    font-family: Roboto;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+/* ===================== CONTENIDO ===================== */
+
+
+h3
+{
+    font-family: 'LouisGeorge';
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0%;
+}
+
+.leyenda
+{
+    font-family: "Roboto";
+    font-size: x-small;
+    text-align: center;
+    margin: 2%;
+    margin-top: 0%;
+}
+
+.texto
+{
+    font-family: "Roboto";
+    font-size:medium;
+    margin: 1rem;
+}
+
+
+/* ======================= MAPA ======================= */
+
+#mapayhorarios
+{
+    width: 32%;
+    height: 28rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: rgb(234, 234, 234);
+    margin: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#mapa
+{
+    background-color: bisque;
+    width: 520px;
+    height: 279px;
+    margin-left: 3rem;
+    margin-top: .5rem;
+}
+
+#horario
+{
+    font-family: "Roboto";
+    font-size:large;
+    margin: 1rem;
+    margin-left: 8%;
+}
+
+/* ===================== CONTACTO ===================== */
+
+#contacto
+{
+    width: 32%;
+    height: 20rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: rgb(234, 234, 234);
+    margin: 2rem;
+    border-radius: 15px;
+    display:grid;
+    justify-content: center;
+    margin-top: 0.1rem;
+}
+
+#celular
+{
+    width: 30rem;
+    height: 3.5rem;
+    background-color: rgb(210,210,210);
+    border-radius: 10px;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: left;
+}
+
+#cel
+{
+    width: 2rem;
+    height: 2rem;
+    margin: 3%;
+    align-self: center;
+    
+}
+
+#instagram
+{
+    width: 30rem;
+    height: 3.5rem;
+    background-color: rgb(210,210,210);
+    border-radius: 10px;
+    margin-top: -1rem;
+    display: flex;
+    justify-content: left;
+}
+
+#ig
+{
+    width: 2rem;
+    height: 2rem;
+    margin: 3%;
+    align-self: center;
+    
+} 
+
+/* ==================== PRODUCTO ==================== */
+.producto
+{
+    width: 30%;
+    height: 57rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: rgb(234, 234, 234);
+    border-radius: 15px;
+    display:grid;
+    justify-content: center;
+}  
+

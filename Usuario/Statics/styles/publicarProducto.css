@@ -1,18 +1,54 @@
+/* = FUENTES
+--------------------------------------------- */
+@font-face{
+    font-family: Infinity;
+    src: url('../fonts/Infinity/MADEINFINITY\ PERSONALUSE-Medium.otf');
+}
+@font-face{
+    font-family: LouisGeorge;
+    src: url('../fonts/LouisGeorgeCafe/Louis\ George\ Cafe.ttf');
+}
+@font-face{
+    font-family: Roboto;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+
 header
 {
     display: grid;
     justify-content: center;
     padding: 3rem;
     margin:auto;
+}
 
+
+h1
+{
+    font-family: 'Infinity';
 }
 
 h3
 {
+    font-family: 'LouisGeorge';
     margin:auto;
     margin-top: 2rem;
 }
 
+a
+{
+    color: rgb(87,150,186);
+}
+
+a:visited
+{
+    color: rgb(44, 118, 160);
+}
+
+.texto
+{
+    font-family: 'Roboto';
+}
 
 
 /* ================ FORM PRODUCTO ================ */
@@ -168,7 +204,7 @@ h3
 }
 
 
-/* ======================== CALENDARIO ======================== */
+/* ======================== DATOS DE CONTACTO ======================== */
 .contacto
 {
     width: 80%;
@@ -217,8 +253,9 @@ h3
     margin-left: 1rem;
 }
 
-#texto
+#text
 {
+    font-family: 'Roboto';
     display:flex;
     justify-content: start;
     align-items: center;
@@ -242,8 +279,6 @@ h3
     margin-left: 1rem;
     margin-top: .5rem;
 }
-
-
 
 
 #btn-publicar
