@@ -212,7 +212,7 @@ CREATE TABLE `producto` (
   KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`),
   CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
   CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -236,7 +236,7 @@ CREATE TABLE `puntosprepa` (
   `Nombre` varchar(255) NOT NULL,
   `Foto_Lugar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID_PuntosPrepa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -245,6 +245,7 @@ CREATE TABLE `puntosprepa` (
 
 LOCK TABLES `puntosprepa` WRITE;
 /*!40000 ALTER TABLE `puntosprepa` DISABLE KEYS */;
+INSERT INTO `puntosprepa` VALUES (1,'Entrada',NULL),(2,'Patio de Sextos',NULL),(3,'Patio de Quintos',NULL),(4,'Patio de Cuartos',NULL),(5,'Pulpo',NULL),(6,'Mesas',NULL),(7,'Canchas',NULL),(8,'Biblioteca',NULL),(9,'Pimponeras',NULL),(10,'Los H',NULL),(11,'Vestidores',NULL);
 /*!40000 ALTER TABLE `puntosprepa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -296,7 +297,7 @@ CREATE TABLE `usuario` (
   `Pim` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID_Usuario`),
   UNIQUE KEY `Cuenta` (`Cuenta`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -317,4 +318,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-16 20:24:46
+-- Dump completed on 2023-06-18  8:53:56
