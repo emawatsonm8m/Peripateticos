@@ -28,6 +28,9 @@
         </div>
         <div>
             Contraseña:
+            <div>
+                <!--para poner la imagen del ojo que abre y cierra-->
+            </div>
         </div>
         <div>
             Nombre:
