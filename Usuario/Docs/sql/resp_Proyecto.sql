@@ -213,7 +213,7 @@ CREATE TABLE `producto` (
   KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`),
   CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
   CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -222,7 +222,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (5,1,1,'Prueba','../../Statics/img/prueba.jpg','Esto es una prueba',5.50,0,'0000-00-00',0,NULL),(6,1,1,'Prueba','../../Statics/img/prueba.jpg','Esto es una prueba',5.50,0,'0000-00-00',0,NULL),(7,1,2,'Prueba3','../../Statics/img/halcon.jpg','Esto es una prueba.',56.89,0,'0000-00-00',0,NULL),(8,1,1,'Prueba4','../../Statics/img/EscudoP6.jpg','Esto es una prueba.',1.00,0,'0000-00-00',0,NULL),(9,1,1,'Prueba5','../../Statics/img/EscudoP6.jpg','Esto es una prueba.',3.00,0,'0000-00-00',0,NULL),(10,1,10,'Prueba6','../../Statics/img/EscudoP6.jpg','Esto es una prueba.',3.00,0,'0000-00-00',0,NULL),(11,1,10,'Prueba7','../../Statics/img/EscudoP6.jpg','Esto es una prueba.',4.00,0,'2023-06-18',0,NULL),(12,1,1,'Prueba8','../../Statics/img/EscudoUNAM.jpg','Última prueba',4556.60,0,'2023-06-12',0,NULL),(13,1,1,'PRUEBA FINAL','../../Statics/img/EscudoP6.jpg','Esto es una prueba para verificar el ingreso correcto de la hora.',1.00,0,'2023-06-20',0,'16:13:00');
+INSERT INTO `producto` VALUES (14,1,5,'Gomitas Magicas','../../Statics/img/gomitas.jpg','Gomitas para darte un viajesote como el que se da Lund antes de entrar a dar clase. Ojo, pegan fuerte. $60 c/u',60.00,0,'2023-06-23',0,'20:45:00');
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -321,4 +321,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-18 15:15:41
+-- Dump completed on 2023-06-19 17:10:09
