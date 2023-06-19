@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Statics/styles/indexPerdidos.css">
     <title>Objetos Perdidos</title>
 </head>
 <body>
@@ -40,7 +41,7 @@
     </div>
 
 
-    <div class="horarios" id="centrar">
+    <div class="lugares" id="centrar">
         <form>
             <h2>Última vez vistos</h2>
             <div class="d-grid gap-2 col-10 mx-auto">
