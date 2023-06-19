@@ -31,6 +31,7 @@
                     mkdir('../../Statics/img');
                 }
                 $nuevaRuta= "../../Statics/img/$name";
+                rename($ruta_temp,$nuevaRuta);
         }
 
         if($lugar==true)
@@ -61,7 +62,7 @@
         
         if($nombre && $nuevaRuta && $descripcion && $costo && $fecha && $lugar && $hora)
         {
-            $usuario = 1;
+            $usuario = 1; //CAMBIAR USUARIO CON SESIONES
             $sql = "INSERT INTO producto ( ID_Usuario, ID_PuntosPrepa, NombreProducto, Foto, Descripcion, Costo, FechaVenta, Horario)
             VALUES ($usuario, $lugar,'$nombre', '$nuevaRuta', '$descripcion', $costo, '$fecha', '$hora')";
             $res = mysqli_query($conexion, $sql);

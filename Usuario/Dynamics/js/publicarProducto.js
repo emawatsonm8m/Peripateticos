@@ -1,6 +1,6 @@
 window.addEventListener("load", () =>
 {
-    const defaultimg = "../../Statics/media/img.jpg";
+    const defaultimg = "../../Statics/media/publicarProducto/img.jpg";
     const img = document.getElementById("default");
     const imagen = document.getElementById("img");
     const formulario = document.getElementById("form-producto");
