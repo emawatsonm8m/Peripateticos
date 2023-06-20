@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../Statics/styles/publicarProducto.css">
     <link rel="stylesheet" href="../../Statics/styles/navs.css">
     <link rel="icon" href="../../Statics/media/logo.png" type="image/icon">
-    <title>Publicar Producto</title>
+    <title>Publicar Objeto</title>
 </head>
 <body>
     <!-- NAV -->
@@ -27,7 +27,7 @@
   </nav>
 
       <!-- Header -->
-      <header><h1>Publicar Producto</h1></header>
+      <header><h1>Publicar Objeto</h1></header>
 
       <!--- Contenido --->
       <div id="nuevoProducto">
@@ -36,7 +36,7 @@
              <!--- Form --->
               <div class="producto" id="centrar">
                   <form id="form-producto">
-                      <div class="d-grid gap-2 col-5 mx-auto" id="nombre"><input type="text" class="form-control" id="placeholder" placeholder="Nombre del Producto" name="nombre" required></div>
+                      <div class="d-grid gap-2 col-5 mx-auto" id="nombre"><input type="text" class="form-control" id="placeholder" placeholder="Nombre del Objeto" name="nombre" required></div>
                       <div class="d-grid gap-2 col-10 mx-auto" id="imagenes">
                           <img src="../../Statics/media/publicarProducto/img.jpg" class="img-fluid" id="default">
                           <div class="d-grid gap-2 col-12 mx-auto">
@@ -48,21 +48,21 @@
                           <textarea class="form-control" id="Descripción" rows="3" name="descripcion" required maxlength="500"></textarea>
                       </div>
                       <div class="down">
-                          <div class="d-grid gap-2 col-2 mx-auto">
-                              <label class="texto">Costo:</label>
-                              <input type="number" class="form-control" id="transparent" placeholder="$00.00" name="costo" required>
-                          </div>
                           <div class="d-grid gap-2 col-3 mx-auto">
-                              <label class="texto">Fecha de inicio de venta:</label>
+                              <label class="texto">Fecha en la que se perdió/encontró:</label>
                               <input type="date" id="transparent" class="form-control" name="fecha" required>
                           </div>
+                          <div class="d-grid gap-2 col-3 mx-auto">
+                            <label class="texto">Recompensa:</label>
+                            <textarea id="transparent" class="form-control" name="recompensa" required max="50" required></textarea>
+                        </div>
                       </div>
               </div>
           </div>
           <div class="col-5" id="centrar">
             <!-- Puntos de venta y horarios -->
               <div class="horarios" id="centrar">
-                <h3>Punto de venta y horario</h3>
+                <h3>Ultima vez visto</h3>
                 <div class="d-grid gap-2 col-10 mx-auto">
                   <img src="../../Statics/media/puntosPrepa/mapa.jpg" class="img-fluid" id="mapa" usemap="#image-map">
                   <button id="btn-back">Regresar</button>
@@ -98,10 +98,6 @@
                               <option value="Vestidores">Vestidores</option>
                             </select>
                         </div>
-                        <div class="d-grid gap-2 col-4 mx-auto">
-                          <label class="texto">Horario:</label>
-                          <input type="time"  min="7:00" max="21:00" id="transparent" class="form-control" name="hora" required>
-                        </div>
                   </div>
                 </form>
               </div>
@@ -129,7 +125,7 @@
       </div>
       <br><br>
 
-      <script src="../js/publicarProducto.js"></script>
-      <script src="../../libs//bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
+      <script src="../js/publicarObjeto.js"></script>
+      <script src="../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
