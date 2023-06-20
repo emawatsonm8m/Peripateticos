@@ -14,11 +14,13 @@
     }else{
         $usuario = sanitizarNumSQL((isset($_POST["usuario"]) && $_POST["usuario"] != "")? $_POST["usuario"] : false);
         $contraseña = sanitizarEmailSQL((isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_POST["contraseña"] : false);
+        $regex1 = "[;]";
+        $regex2 = "[\s]"; 
 
         if(strlen($usuario) != 9)
             echo "Faltaron o sobraron números";
-        else if(strlen($contraseña) < 8)
-            echo "Tu contraseña tiene pocos caracteres";
+        else if(strlen($contraseña) < 8 || preg_match($regex1, $contraseña) == 1 || preg_match($regex2, $contraseña) == 1)
+            echo "Contraseña incorrecta";
         else{
             $existe = "SELECT * FROM usuario WHERE Cuenta = '$usuario'";
             $buscando = mysqli_query($conexion, $existe);
