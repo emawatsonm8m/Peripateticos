@@ -24,7 +24,7 @@ window.addEventListener("load", () =>
     {
         e.preventDefault();
         datosForm = new FormData(formulario);
-        fetch("../Dynamics/php/publicarProducto.php", {
+        fetch("../php/publicarProductoDB.php", {
             method: "POST",
             body: datosForm
         }).then((respuesta)=>{
@@ -59,73 +59,73 @@ window.addEventListener("load", () =>
     const lugar = document.getElementById("lugar")
     
     back.addEventListener("click", () =>{
-        mapa.src = "../Statics/media/puntosPrepa/mapa.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/mapa.jpg";
         lugar.value=("");
     })
 
     entrada.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/entrada.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/entrada.jpg";
         lugar.value=("Entrada");
     })
 
     sextos.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/sextos.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/sextos.jpg";
         lugar.value=("Patio de Sextos");
     })
 
     cuartos.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/cuartos.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/cuartos.jpg";
         lugar.value=("Patio de Cuartos");
     })
 
     quintos.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/quintos.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/quintos.jpg";
         lugar.value=("Patio de Quintos");
     })
 
     pulpo.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/pulpo.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/pulpo.jpg";
         lugar.value=("Pulpo");
     })
 
     mesas.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/mesas.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/mesas.jpg";
         lugar.value=("Mesas");
     })
 
     canchas.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/canchas.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/canchas.jpg";
         lugar.value=("Canchas");
     })
 
     biblio.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/biblio.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/biblio.jpg";
         lugar.value=("Biblioteca");
     })
 
     pimpos.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/pimpos.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/pimpos.jpg";
         lugar.value=("Pimponeras");
     })
 
     h.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/h.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/h.jpg";
         lugar.value=("Los H");
     })
 
     vestidores.addEventListener("mouseover", (e)=>
     {
-        mapa.src = "../Statics/media/puntosPrepa/vestidores.jpg";
+        mapa.src = "../../Statics/media/puntosPrepa/vestidores.jpg";
         lugar.value=("Vestidores");
     })
 })

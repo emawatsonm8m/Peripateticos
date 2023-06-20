@@ -77,6 +77,21 @@ h3
     padding: 1%;
 }
 
+#visto
+{
+    width: 90%;
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    background-color: rgb(234, 234, 234);
+    margin: 2rem;
+    border-radius: 15px;
+    margin-right: 0%;
+    padding: 1%;
+}
+
 #mapa
 {
     width: 30rem;
@@ -93,6 +108,7 @@ h3
     display: flex;
     margin:0.5%;
     align-self: center;
+    justify-content: center;
 }
 
 
@@ -103,7 +119,6 @@ h3
     align-self: center;
     font-family: "Roboto";
     font-size:large;
-    margin-left: 8%;
 }
 
 /* ===================== CONTACTO ===================== */
@@ -216,6 +231,15 @@ h3
 {
     display: flex;
     justify-content: space-around;
+    align-self: center;
+    padding: 2%;
+    width: 70%;
+}
+
+#down2
+{
+    display: flex;
+    justify-content: space-between;
     align-self: center;
     padding: 2%;
     width: 70%;
