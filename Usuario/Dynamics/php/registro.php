@@ -19,7 +19,7 @@
         <img src="../../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM">
     </header>
     <main>
-        <form action="./usuarioDB.php" method="post">
+        <form action="./registroDB.php" method="post">
             <h1>Crear cuenta</h1>
             <article class="input">
                 <input type="tel" name="user" minlength="9" maxlength="9" placeholder="                 No. de cuenta" required/>

@@ -25,6 +25,4 @@
         // mysqli_stmt_execute ($peticion);
         $respuesta = $mysqli_fetch_assoc($mysqli_stmt_execute ($peticion));
     }
-
-    echo "Hola";
 ?>
