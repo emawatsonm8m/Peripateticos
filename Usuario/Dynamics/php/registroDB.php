@@ -23,7 +23,7 @@
 
         if(strlen($user) != 9)
             echo "Tu usuario debe llevar solo números";
-        else if(strlen($contraseña) <= 8 || preg_match($regex1, $contraseña) == 1 || preg_match($regex2, $contraseña) == 1) // Esta raro....
+        else if(strlen($contraseña) <= 8 || preg_match($regex1, $contraseña) == 1 || preg_match($regex2, $contraseña) == 1) 
             echo "Tu contraseña no debe llevar espacios ni ;";
         else if(strlen($nombre) >= 20 || preg_match($regex1, $nombre) == 1)
             echo "Tu nombre es muy largo y/o no debe llevar ;";
