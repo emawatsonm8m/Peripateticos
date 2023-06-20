@@ -17,17 +17,20 @@
         $nombre = sanitizarCadenaSQL((isset($_POST["nombre"]) && $_POST["nombre"] != "")? $_POST["nombre"] : false);
         $celular = sanitizarNumSQL((isset($_POST["celular"]) && $_POST["celular"] != "")? $_POST["celular"] : false);
         $instagram = sanitizarEmailSQL((isset($_POST["instagram"]) && $_POST["instagram"] != "")? $_POST["instagram"] : false);
+        $regex1 = "[;]";
+        $regex2 = "[\s]";
+        $regex3 = "/^@(\w|\.){1,}/";
 
         if(strlen($user) != 9)
-            echo "Faltaron o sobraron números";
-        else if(strlen($contraseña) < 8)
-            echo "Tu contraseña tiene pocos caracteres";
-        else if(strlen($nombre) > 20)
-            echo "Tu nombre es muy largo";
+            echo "Tu usuario debe llevar solo números";
+        else if(strlen($contraseña) <= 8 || preg_match($regex1, $contraseña) == 1 || preg_match($regex2, $contraseña) == 1) // Esta raro....
+            echo "Tu contraseña no debe llevar espacios ni ;";
+        else if(strlen($nombre) >= 20 || preg_match($regex1, $nombre) == 1)
+            echo "Tu nombre es muy largo y/o no debe llevar ;";
         else if(strlen($celular) != 10)
             echo "Tu numero le faltan o sobran caracteres";
-        else if(strlen($instagram) > 20)
-            echo "Instagram muy largo";
+        else if(strlen($instagram) >= 20 || preg_match($regex1, $instagram) == 1 || preg_match($regex3, $instagram) == 0)
+            echo "Tu instagram no es correcto";
         else{
             $sal = generarSal();
             $pimienta = generarPimienta();
