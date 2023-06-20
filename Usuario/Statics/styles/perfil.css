@@ -48,12 +48,26 @@ main{
     padding: 0 0 0 1rem ;
 }
 
+.Botones{
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    width: 100%;
+}
+
 .BotonPerfil{
-    display: flex; 
-    align-self: end;
+    /*display: flex; 
+    align-self: end; */
     padding: 0.5rem;
     border-radius: 0.5rem;
+    background-color: #bbbbbb;
 }
+
+/* .CerrarSesion{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #bbbbbb;
+} */
 
 
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Statics/styles/perfil.css">
+    <link rel="stylesheet" href="../../Statics/styles/perfil.css">
     <title>Perfil</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
     <section id="Perfil" class="DatosPerfil">
         <h2>Tu perfil</h2>
         <div>
-            <img src="../Statics/media/PerfilVacio.png" alt="FotoPerfil" height="60" width="60">
+            <img src="../../Statics/media/PerfilVacio.png" alt="FotoPerfil" height="60" width="60">
         </div>
         <div class="info">
             Usuario:
@@ -39,13 +39,14 @@
         <div class="info">
             Instagram:
         </div>
-        <div>
-            <button class="BotonPerfil">Editar perfil</button>
+        <div class="Botones">
+            <button class="BotonPerfil" id="Editar">Editar perfil</button>
+            <button class="BotonPerfil" id="Salir">Cerrar Sesión</button>
         </div>
     </section>
     <!-- <section class="Derecha">
         <article id="Publicaciones">
-            <h2>Tus publicaciones</h2>
+            <h2>Tus public∫aciones</h2>
             <div id="comentario">
                 <img src="../Statics/media/PerfilVacio.png" alt="FotoPerfil" height="20" width="20">
                 <p>Mensaje   pesta parte se conecta con la base de datos
@@ -60,6 +61,6 @@
         </article>
     </section>-->
 </main>
-    <script src="../Dynamics/js/PetiFetch.js"></script>
+    <script src="../js/perfil.js"></script>
 </body>
 </html>
