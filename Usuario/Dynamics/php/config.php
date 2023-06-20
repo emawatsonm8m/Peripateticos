@@ -2,7 +2,7 @@
     const DBHOST = "localhost";
     const DBUSER = "root";
     const DBPASS = "";
-    const DBNAME = "resp_Proyecto";
+    const DBNAME = "Proyecto";
 
     function connect (){
         $conexion = mysqli_connect (DBHOST, DBUSER, DBPASS, DBNAME);
