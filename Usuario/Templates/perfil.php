@@ -7,7 +7,7 @@
     <title>Perfil</title>
 </head>
 <body>
-<nav class="NavBar">
+<!-- <nav class="NavBar">
         <ul>
             <li><img src="../Statics/media/EscudoP6.png" id="P6" alt="Prepa_6">
             <img src="../Statics/media/EscudoUNAM.png" id="UNAM"alt="UNAM"></li>
@@ -16,53 +16,50 @@
             <li><a href="#" class="TextSelect">Comunidad P6</a></li>
             <li><a href="#"><img src="../Statics/media/PerfilVacio.png" id="FP" alt="FotoPerfil"></a></li>
         </ul>
-    </nav>
-    
-    <div id="Perfil" class="DatosPerfil">
+    </nav> -->
+<main> 
+    <section id="Perfil" class="DatosPerfil">
         <h2>Tu perfil</h2>
         <div>
             <img src="../Statics/media/PerfilVacio.png" alt="FotoPerfil" height="60" width="60">
         </div>
-        <div>
+        <div class="info">
             Usuario:
         </div>
-        <div>
+        <div class="info">
             Contraseña:
-            <div>
-                <!--para poner la imagen del ojo que abre y cierra-->
-            </div>
+            <!--para poner la imagen del ojo que abre y cierra-->
         </div>
-        <div>
+        <div class="info">
             Nombre:
         </div>
-        <div>
+        <div class="info">
             Número de celular:
-        </div>
-        <div>
+        </div class="info">
+        <div class="info">
             Instagram:
         </div>
         <div>
-            <button id="Perfil">Editar perfil</button>
+            <button class="BotonPerfil">Editar perfil</button>
         </div>
-    </div>
-    <section id="Publicaciones">
-        <h2>Tus publicaciones</h2>
-        <article id="comentario">
-            <img src="../Statics/media/PerfilVacio.png" alt="FotoPerfil" height="20" width="20">
-            <p>Mensaje</p><!--esta parte se conecta con la base de datos-->
-            <div><button class="EditPublicacion"></button></div>
-        </article>
     </section>
-    <section id="Comunidad">
-        <h2>Comunidad</h2>
-        <article id="Publicacion">
-            <div><button class="EditPublicacion"></button></div>
+    <!-- <section class="Derecha">
+        <article id="Publicaciones">
+            <h2>Tus publicaciones</h2>
+            <div id="comentario">
+                <img src="../Statics/media/PerfilVacio.png" alt="FotoPerfil" height="20" width="20">
+                <p>Mensaje   pesta parte se conecta con la base de datos
+                <div><button class="EditPublicacion"></button></div>
+            </div>
         </article>
-    </section>
-    <div id="Guardados">
-        <h2 id="Guardado">Publicaciones Guardadas</h2>
-        <div></div>
-    </div>
+        <article id="Comunidad">
+            <h2>Comunidad</h2>
+            <div id="Publicacion">
+                <button class="EditPublicacion"></button>
+            </div>
+        </article>
+    </section>-->
+</main>
     <script src="../Dynamics/js/PetiFetch.js"></script>
 </body>
 </html>
