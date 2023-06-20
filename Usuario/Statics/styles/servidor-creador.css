@@ -1,0 +1,128 @@
+@media screen AND (min-width: 62rem) { /*media querie para que cambie la distribucion del navbar arriba de los 992 px*/
+    #paginaPrincipal{
+        position: relative;
+        left: 33rem;
+        top: 1rem;
+    }
+    #Ventas{
+        position: relative;
+        left: 36rem;
+        top: 1rem;
+    }
+    #ObjetosPerdidos{
+        position: relative;
+        left: 39rem;
+        top: 1rem;
+    }
+    #ComunidadP6{
+        position: relative;
+        left: 42rem;
+        top: 1rem;
+    }
+    #pfp{
+        position: relative;
+        left: 45rem;
+    }
+}
+main{ /*Tamaño del contenedor de la info principal*/
+    width: 90%;
+    height: auto;
+    position: relative;
+    left: 5%;
+    top: 2rem;
+    background-color: #EAEAEA;
+    border-radius: 1rem;
+}
+.nav{ /*Estilo para todas las opciones del navbar*/
+    border-radius: 5rem;
+    background-color: #366372;
+    font-size: larger;
+    color: #ffffff;
+}
+.infoServer{ /*Posición de la informacion del server para que no se encimara*/
+    position: relative;
+    top: 2rem;
+}
+#pfp{ /*Tamaño de la foto de perfil del usuario*/
+    width: 4rem;
+    height: 4rem;
+}
+#PortadaServer{ /*Diseño de la portada del server*/
+    width: 100%;
+    height: 8rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+    background-color: #D6D6D6;
+}
+#linkServer{ /*Diseño del boton para conseguir el link del server*/
+    width: 1rem;
+    position: relative;
+    left: 95%;
+    font-size: larger;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+#pfpServer{ /*Foto de perfil del server*/
+    height: 4rem;
+    width: 4rem;
+    border-radius: 5rem;
+    background-color: #737373;
+    position: relative;
+    left: 1.5rem;
+    top: 4rem;
+}
+#infoServer{ /*Tamaño del contenedor de la información del server*/
+    height: 8rem;
+}
+#descripcion_reglas{ /*Tamaño y distribución del contenedor de la descripción y las reglas*/
+    width: 100%;
+    height: 16rem;
+    display: flex;
+    justify-content: space-around;
+}
+#descipcion{ /*Tamaño del contenedor de la descripción*/
+    width: 40%;
+    background-color: #D6D6D6;
+    overflow: auto;
+    border-radius: 0.5rem;
+}
+#reglas{ /*Contenedor de las reglas*/
+    width: 40%;
+    background-color: #D6D6D6;
+    overflow: auto;
+    border-radius: 0.5rem;
+}
+#P6{ /*Logo de la P6*/
+    position: absolute;
+    top: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+}
+#unam{ /*Logo de la UNAM*/
+    position: absolute;
+    top: 0.5rem;
+    left: 5rem;
+    width: 4rem;
+    height: 4rem;
+}
+#editar{ /*Botón para editar*/
+    font-size: small;
+    position: relative;
+    left: 65rem;
+    top: 3rem;
+    background-color: #FFFFCC;
+    border-radius: 1rem;
+}
+#agregarMSJ{ /*Botón para agregar mensaje*/
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: #5796BA;
+    color: #ffffff;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 68rem;
+}

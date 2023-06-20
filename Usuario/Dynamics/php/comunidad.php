@@ -63,6 +63,7 @@
             </article>
         </section>
     </main>
+    <script src="../js/chat.js"></script>
     <script src="../js/navs.js"></script>
 </body>
 </html>
