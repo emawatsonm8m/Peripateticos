@@ -1,9 +1,9 @@
 <?php
     require "./config.php";
-    $conexion = connect ();
-    $peticion = "SELECT * FROM club WHERE ID_Club=1";
+    $conexion = connect (); //Conexión con la base de datos
+    $peticion = "SELECT * FROM club WHERE ID_Club=1"; //petición
     $query = mysqli_query($conexion, $peticion);
-    $info_club = mysqli_fetch_assoc($query);
+    $info_club = mysqli_fetch_assoc($query); //Información que regreso la petición
     echo
     "
         <!DOCTYPE html>
@@ -33,6 +33,10 @@
                         <br><br>
                         <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
                             <li class='nav-item'>
+                                <button id='pfp' class='nav'></button>
+                            </li>
+                            <br>
+                            <li class='nav-item'>
                                 <button id='paginaPrincipal' class='nav'>Página Principal</button>
                             </li>
                             <br>
@@ -46,10 +50,6 @@
                             <br>
                             <li>
                                 <button id='ComunidadP6' class='nav'>Comunidad 
-                            </li>
-                            <br>
-                            <li>
-                                <button id='pfp' class='nav'></button>
                             </li>
                         </ul>
                         </div>
@@ -79,5 +79,5 @@
             <script src='../../libs/bootstrap-5.3.0-dist/js/bootstrap.bundle.js'></script>
         </body>
         </html>
-    "
+    ";
 ?>
