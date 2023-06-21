@@ -1,27 +1,27 @@
 @media screen AND (min-width: 62rem) { /*media querie para que cambie la distribucion del navbar arriba de los 992 px*/
     #paginaPrincipal{
         position: relative;
-        left: 33rem;
+        left: 36.5rem;
         top: 1rem;
     }
     #Ventas{
         position: relative;
-        left: 36rem;
+        left: 37.5rem;
         top: 1rem;
     }
     #ObjetosPerdidos{
         position: relative;
-        left: 39rem;
+        left: 38.5rem;
         top: 1rem;
     }
     #ComunidadP6{
         position: relative;
-        left: 42rem;
+        left: 39.5rem;
         top: 1rem;
     }
     #pfp{
         position: relative;
-        left: 45rem;
+        left: 74rem;
     }
 }
 main{ /*Tamaño del contenedor de la info principal*/
