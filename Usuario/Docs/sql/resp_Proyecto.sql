@@ -207,12 +207,16 @@ CREATE TABLE `producto` (
   `Cantidad` int(11) NOT NULL,
   `FechaVenta` date NOT NULL,
   `Calificacion` int(11) NOT NULL,
+  `Horario` time DEFAULT NULL,
+
   PRIMARY KEY (`ID_Producto`),
   KEY `ID_Usuario` (`ID_Usuario`),
   KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`),
   CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
   CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -221,6 +225,8 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
+INSERT INTO `producto` VALUES (14,1,5,'Gomitas Magicas','../../Statics/img/gomitas.jpg','Gomitas para darte un viajesote como el que se da Lund antes de entrar a dar clase. Ojo, pegan fuerte. $60 c/u',60.00,0,'2023-06-23',0,'20:45:00');
+
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -236,7 +242,9 @@ CREATE TABLE `puntosprepa` (
   `Nombre` varchar(255) NOT NULL,
   `Foto_Lugar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID_PuntosPrepa`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -245,7 +253,9 @@ CREATE TABLE `puntosprepa` (
 
 LOCK TABLES `puntosprepa` WRITE;
 /*!40000 ALTER TABLE `puntosprepa` DISABLE KEYS */;
-INSERT INTO `puntosprepa` VALUES (1,'Entrada',NULL),(2,'Patio de Sextos',NULL),(3,'Patio de Quintos',NULL),(4,'Patio de Cuartos',NULL),(5,'Pulpo',NULL),(6,'Mesas',NULL),(7,'Canchas',NULL),(8,'Biblioteca',NULL),(9,'Pimponeras',NULL),(10,'Los H',NULL),(11,'Vestidores',NULL);
+
+INSERT INTO `puntosprepa` VALUES (1,'Entrada','../../Statics/media/puntosPrepa/entrada.jpg'),(2,'Patio de Sextos','../../Statics/media/puntosPrepa/sextos.jpg'),(3,'Patio de Cuartos','../../Statics/media/puntosPrepa/cuartos.jpg'),(4,'Patio de Quintos','../../Statics/media/puntosPrepa/quintos.jpg'),(5,'Pulpo','../../Statics/media/puntosPrepa/pulpo.jpg'),(6,'Mesas','../../Statics/media/puntosPrepa/mesas.jpg'),(7,'Canchas','../../Statics/media/puntosPrepa/canchas.jpg'),(8,'Pimponeras','../../Statics/media/puntosPrepa/pimpos.jpg'),(9,'Los H','../../Statics/media/puntosPrepa/h.jpg'),(10,'Biblioteca','../../Statics/media/puntosPrepa/biblio.jpg'),(11,'Vestidores','../../Statics/media/puntosPrepa/vestidores.jpg'),(13,'MAPA','../../Statics/media/puntosPrepa/mapa.jpg');
+
 /*!40000 ALTER TABLE `puntosprepa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -297,7 +307,9 @@ CREATE TABLE `usuario` (
   `Pim` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID_Usuario`),
   UNIQUE KEY `Cuenta` (`Cuenta`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -306,6 +318,9 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+
+INSERT INTO `usuario` VALUES (1,322100000,'Prueba','prueba123',NULL,'',0,NULL,NULL);
+
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -318,4 +333,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-18  8:53:56
+-- Dump completed on 2023-06-19 17:10:09
+

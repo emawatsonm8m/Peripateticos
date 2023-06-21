@@ -96,3 +96,23 @@ button{
 #cambio{
     align-self: flex-end;
 }
+#fotoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#foto{
+    display: none;
+}
+#agregar{
+    position: absolute;
+    z-index: 10;
+    height: 0.8rem; 
+    width: 92%;
+    padding: 1rem;
+    background-color: #ffffff;
+}
