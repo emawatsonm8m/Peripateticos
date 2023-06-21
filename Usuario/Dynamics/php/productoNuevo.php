@@ -30,15 +30,6 @@
             </div>
             <img  class="fotoUsuario" id="perfil" class="escudop6" id="vacio" src="../../Statics/media/logo.png" alt="UNAM" id="UNAM" width="80" height="80" >
         </nav>
-<body>
-    <!-- NAV -->
-    <nav>
-      <section class="img">
-        <!-- <img src="../Statics/media/EscudoP6.jpg" alt="ENP6" id="prepa6"> -->
-        <!-- <img src="../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM"> -->
-      </section>
-      
-  </nav>
 </body>
 </html>
   <!-- CONTENIDO -->

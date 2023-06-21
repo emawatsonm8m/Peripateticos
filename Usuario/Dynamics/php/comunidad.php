@@ -64,7 +64,7 @@
             <article class="portada"></article>
             <article class="usuarioPortada"></article>
             <!-- lo demas de aqui se haria con la BD y JS-->
-            <article class="server" class="btn btn-secondary"  id="unirse">Unirme</article><!-- JS cuando se de click eliminar este boton -->
+            <article class="server" class="btn btn-secondary"  id="unirse">Unirse</article><!-- JS cuando se de click eliminar este boton -->
             <article class="datos" class="col-6">
                 <div>Nombre del servidor/club</div>
                 <div>Fecha de creacion y creador</div>
