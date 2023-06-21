@@ -24,6 +24,7 @@
     if(!$conexion){
         echo "No se pudo conectar con la base de datos";
     }else{
+        // $arch = (isset($_POST["arch"]) && $_POST["arch"] != "")? $_POST["arch"] : false;
         $user = sanitizarNumSQL((isset($_POST["user"]) && $_POST["user"] != "")? $_POST["user"] : false);
         $contraseña = sanitizarEmailSQL((isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_POST["contraseña"] : false);
         $nombre = sanitizarCadenaSQL((isset($_POST["nombre"]) && $_POST["nombre"] != "")? $_POST["nombre"] : false);
@@ -44,6 +45,14 @@
         else if(strlen($instagram) >= 20 || preg_match($regex1, $instagram) == 1 || preg_match($regex3, $instagram) == 0)
             echo "Tu instagram no es correcto";
         else{
+            if($_FILES["arch"]["name"] != ""){
+                $name = $_FILES["arch"]["name"];
+                $arch = $_FILES["arch"]["tmp_name"];
+                $ext = pathinfo($name, PATHINFO_EXTENSION);
+                $nombreDeArchivo = pathinfo($name, PATHINFO_FILENAME);
+                $nuevaRuta= "../../Statics/media/fotosPerfil/$nombreDeArchivo.$ext";
+                rename($arch, $nuevaRuta);
+            }
             $sal = generarSal();
             $pimienta = generarPimienta();
             $contraHash = hashearContra($contraseña.$pimienta.$sal);
@@ -53,8 +62,14 @@
             if(mysqli_num_rows($buscando) > 0){     // si ya existe ese usuario no volver a crear
                 echo "Ese usuario ya esta registrado";
             }else{      //se guarda en base de datos y redirige
-                $sql = "INSERT INTO usuario (Cuenta, Nombre, Contraseña, Instagram, Celular, Sal) VALUES ('$user', '$nombre', '$contraHash', '$instagram', '$celular', '$sal')";
-                $res = mysqli_query($conexion, $sql);
+                if($_FILES["arch"]["name"] != ""){
+                    $sql = "INSERT INTO usuario (Cuenta, Nombre, Contraseña, Instagram, Celular, Sal, Foto_Perfil) VALUES ('$user', '$nombre', '$contraHash', '$instagram', '$celular', '$sal', '$nuevaRuta')";
+                    $res = mysqli_query($conexion, $sql);
+                }else{
+                    $sql = "INSERT INTO usuario (Cuenta, Nombre, Contraseña, Instagram, Celular, Sal) VALUES ('$user', '$nombre', '$contraHash', '$instagram', '$celular', '$sal')";
+                    $res = mysqli_query($conexion, $sql);
+                }
+                // recibe foto de perfil si se hace...
                 header('Location: ../../index.php');
             }
         }

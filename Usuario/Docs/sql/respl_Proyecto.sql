@@ -168,8 +168,7 @@ CREATE TABLE `objeto` (
   `NombreObjeto` varchar(255) NOT NULL,
   `Foto` varchar(255) DEFAULT NULL,
   `Descripcion` varchar(500) NOT NULL,
-  `UltimoLugar` varchar(500) NOT NULL,
-  `Recompensa` decimal(10,2) NOT NULL,
+  `Recompensa` varchar(50) DEFAULT NULL,
   `Fecha` date NOT NULL,
   `Estado` varchar(255) NOT NULL,
   PRIMARY KEY (`ID_Objeto`),
@@ -177,7 +176,7 @@ CREATE TABLE `objeto` (
   KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`),
   CONSTRAINT `objeto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
   CONSTRAINT `objeto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -186,6 +185,7 @@ CREATE TABLE `objeto` (
 
 LOCK TABLES `objeto` WRITE;
 /*!40000 ALTER TABLE `objeto` DISABLE KEYS */;
+INSERT INTO `objeto` VALUES (3,1,1,'Dignidad','../../Statics/imgobj/momazo.jpg','Si la ven por ahí díganle que vuelva','Una relación bonita y estable.','2023-02-03','');
 /*!40000 ALTER TABLE `objeto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -213,7 +213,7 @@ CREATE TABLE `producto` (
   KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`),
   CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
   CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -321,4 +321,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-20 10:50:04
+-- Dump completed on 2023-06-20 17:19:31

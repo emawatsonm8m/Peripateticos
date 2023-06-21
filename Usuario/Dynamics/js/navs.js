@@ -18,6 +18,6 @@ window.addEventListener("load", ()=>{
         window.location.href = "./comunidad.php";
     })
     perfil.addEventListener("click", ()=>{
-        window.location.href = "./..."; //... debe de ir la ruta faltante
+        window.location.href = "./perfil.php";
     })
 })

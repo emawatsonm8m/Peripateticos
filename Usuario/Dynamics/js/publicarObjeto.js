@@ -1,10 +1,9 @@
 window.addEventListener("load", () =>
 {
-    const defaultimg = "../../Statics/media/publicarProducto/img.jpg";
     const img = document.getElementById("default");
     const imagen = document.getElementById("img");
     const formulario = document.getElementById("form-producto");
-    const publicar = document.getElementById("btn-publicar");
+    const publicarobj = document.getElementById("btn-publicar");
 
     /* Hace el prewiew de la imagen */
     imagen.addEventListener("change", e =>
@@ -17,14 +16,14 @@ window.addEventListener("load", () =>
             };
             reader.readAsDataURL(e.target.files[0]);
         }
-    })
+    });
 
-    /*Recibe la información del form y la manda por POST*/
-    publicar.addEventListener("click", (e) =>
+    /*Recibe la información del form de objeto y la manda por POST*/
+    publicarobj.addEventListener("click", (e) =>
     {
         e.preventDefault();
         datosForm = new FormData(formulario);
-        fetch("../php/publicarProductoDB.php", {
+        fetch("../php/publicarObjetoDB.php", {
             method: "POST",
             body: datosForm
         }).then((respuesta)=>{

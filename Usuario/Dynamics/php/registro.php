@@ -20,8 +20,12 @@
         <img src="../../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM">
     </header>
     <main>
-        <form action="./registroDB.php" method="post">
+        <form action="./registroDB.php" method="post" enctype="multipart/form-data">
             <h1>Crear cuenta</h1>
+            <img src="../../Statics/media/fotosPerfil/perfilVacio.png" alt="foto perfil" id="fotoPerfil" >
+            <article class="input" id="foto">
+                <input accept="image/*" type="file" name="arch" id="agregar">
+            </article>
             <article class="input">
                 <input type="tel" name="user" minlength="9" maxlength="9" placeholder="                 No. de cuenta" required/>
                 <label for="user">
@@ -29,7 +33,7 @@
                 </label>
             </article>
             <article class="input">
-                <input type="password" name="contraseña" minlength="8" placeholder="                      dd/mm/aaaa" required/>
+                <input type="password" name="contraseña" minlength="8" required/>
                 <label for="contraseña">
                     <p class="campo">Contraseña:</p>
                 </label>
@@ -56,6 +60,7 @@
             <button type="submit">Crear cuenta</button>
             <article class="text" id="cambio">Si ya tienes una cuenta, <a href="../../index.php">inicia sesion.</a></article>
         </form>
-    </main>    
+    </main> 
+    <script src="../js/fotoPerfil.js"></script>   
 </body>
 </html>
