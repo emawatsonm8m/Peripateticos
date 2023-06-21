@@ -13,6 +13,7 @@
     <title>Comunidad</title>
     <link rel="stylesheet" href="../../Statics/styles/pagPrincipales.css">
     <link rel="stylesheet" href="../../Statics/styles/navs.css">
+    <link rel="icon" href="../../Statics/media/logo.png" type="image/icon">
 </head>
 <body>
     <nav>
@@ -21,7 +22,7 @@
             <img src="../../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM">
         </section>
         <section class="pags">
-            <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+            <article class="pagRedireccion" id="pagPrincipal"><a href="./Inicio.php">Pagina principal</a></article>
             <article class="pagRedireccion" id="ventas">Ventas</article>
             <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
             <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>

@@ -18,7 +18,7 @@
         <!-- <img src="../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM"> -->
       </section>
       <section class="pags">
-          <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+          <article class="pagRedireccion" id="pagPrincipal"><a href="./Inicio.php">Pagina principal</a></article>
           <article class="pagRedireccion" id="ventas">Ventas</article>
           <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
           <article class="pagRedireccion" id="comunidad">Comunidad P6</article>

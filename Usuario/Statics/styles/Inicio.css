@@ -92,5 +92,10 @@ h1{
     margin-bottom: 1%;
 }
 .CARRUSEL{
-    background-color: #D9D9D9;
+    background-color: #ffffff;
 }
+#uno{
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+  }
