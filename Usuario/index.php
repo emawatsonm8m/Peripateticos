@@ -29,12 +29,11 @@
                 </label>
             </article>
             <article class="input">
-                <input type="password" name="contraseña" minlength="8" required/>
+                <input type="password" name="contraseña" minlength="8" placeholder="                      Fecha de Nacimiento" required/>
                 <label for="contraseña">
                     <p class="campo">Contraseña:</p>
                 </label>
             </article>
-            <article class="text">Tu contraseña es tu fecha de nacimiento.</article>
             <button type="submit">Iniciar sesion</button>
             <article class="text" id="cambio">Si no tienes una cuenta, <a href="./Dynamics/php/registro.php">crea una.</a></article>
         </form>

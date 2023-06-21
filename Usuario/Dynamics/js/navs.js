@@ -6,7 +6,7 @@ window.addEventListener("load", ()=>{
     const perfil = document.getElementById("perfil");
 
     principal.addEventListener("click", ()=>{
-        window.location.href = "./..."; //... debe de ir la ruta faltante
+        window.location.href = "../php/Inicio.php"; //... debe de ir la ruta faltante
     })
     ventas.addEventListener("click", ()=>{
         window.location.href = "./..."; //... debe de ir la ruta faltante
