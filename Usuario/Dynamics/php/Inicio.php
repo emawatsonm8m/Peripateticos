@@ -38,7 +38,7 @@
         <div class="CARRUSEL">
         <div class="carrusel">
             <div class="elemento">
-                <img><!--Insertar imagen-->
+                <img src="../../Statics/media/carrusel/uno.jpg"><!--Insertar imagen-->
             </div>
 
             <div class="elemento">
