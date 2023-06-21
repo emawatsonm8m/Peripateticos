@@ -28,7 +28,7 @@
                 </label>
             </article>
             <article class="input">
-                <input type="password" name="contraseña" minlength="8" placeholder="                      dd/mm/aaaa" required/>
+                <input type="password" name="contraseña" minlength="8" required/>
                 <label for="contraseña">
                     <p class="campo">Contraseña:</p>
                 </label>
