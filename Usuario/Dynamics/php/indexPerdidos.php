@@ -28,18 +28,6 @@
             <img  class="fotoUsuario" id="perfil" class="escudop6" id="vacio" src="../../Statics/media/logo.png" alt="UNAM" id="UNAM" width="80" height="80" >
     </nav>
 <body>
-
-    <!--Barra de Navegacion-->
-<!-- <nav class="NavBar">
-        <ul>
-            <li><img src="../Statics/media/EscudoP6.png" id="P6" alt="Prepa_6">
-            <img src="../Statics/media/EscudoUNAM.png" id="UNAM"alt="UNAM"></li>
-            <li><a href="#" class="TextSelect">Ventas</a></li>
-            <li><a href="#" class="TextSelect">Objetos perdidos</a></li>
-            <li><a href="#" class="TextSelect">Comunidad P6</a></li>
-            <li><a href="#"><img src="../Statics/media/PerfilVacio.png" id="FP" alt="FotoPerfil"></a></li>
-        </ul>
-    </nav> -->
         <h1>Objetos Perdidos</h1>
 <main>
     <!--Hay que buscar cual es la clase del fondo gris y quitarla o agregarle class="container overflow-hidden text-center" pls por que el fondo no quiere jalar -->
@@ -59,11 +47,11 @@
     <section class="Derecha">
         <div class="Objeto">
             <h2 class="AgregarObjeto">¿Perdiste Algo?</h2>
-            <button class="Mas" class="btn btn-secondary">+</button>
+            <button class="Mas" class="btn btn-secondary"><a class="nav-link" href="#" id="perder">+</a></button>
         </div>
         <div class="Objeto" class="container overflow-hidden text-center" >
             <h2 >¿Encontraste Algo?</h2>
-            <button class="Mas"  class="btn btn-secondary">+</button>
+            <button class="Mas"  class="btn btn-secondary"><a class="nav-link" href="#" id="encontre">+</a></button>
         </div>
         <div class="lugares" id="centrar">
             <form>
