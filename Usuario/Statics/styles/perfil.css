@@ -13,14 +13,24 @@ main{
     gap: 1rem;
     justify-content: center;
 }
+.fotito{
+    height: 4rem; 
+    width: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#listo{
+    display: none;
+}
 .DatosPerfil{
     width: 40%;
     background-color: #eaeaea;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
     padding: 2rem;
 }
 .info{
@@ -34,7 +44,7 @@ main{
 }
 .Botones{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* flex-direction: column; */
     width: 100%;
 }
@@ -43,6 +53,7 @@ main{
     align-self: end; */
     padding: 0.5rem;
     border-radius: 0.5rem;
+    border: thin;
     background-color: #bbbbbb;
 }
 #Publicaciones{
@@ -52,4 +63,10 @@ main{
 }
 #Comunidad{
     background-color: #eaeaea;
+}
+#oculto{
+    display: none;
+}
+.hidden{
+    display: none;
 }

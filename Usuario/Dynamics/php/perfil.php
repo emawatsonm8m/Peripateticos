@@ -14,20 +14,6 @@
 </head>
 <body>
     <?php
-        // require "./config.php";
-        // $conexion = connect ();
-        // if(!$conexion){
-        //     echo "No se pudo conectar con la base de datos";
-        // }else{
-        //     $sql = "SELECT Nombre, Instagram, Celular, Foto_Perfil FROM usuario WHERE Cuenta = ".$_SESSION['usuario'];
-        //     $res = mysqli_query($conexion,$sql);
-        //     while($respuesta = mysqli_fetch_assoc($res)){
-        //         $nombre = $respuesta['Nombre'];
-        //         $instagram = $respuesta['Instagram'];
-        //         $celular = $respuesta ['Celular'];
-        //         $fotoPerfil = $respuesta['Foto_Perfil'];
-        //     }
-        // }
     //  <nav class="NavBar">
     //         <ul>
     //             <li><img src="../Statics/media/EscudoP6.png" id="P6" alt="Prepa_6">
@@ -42,26 +28,42 @@
         <section id="Perfil" class="DatosPerfil">
             <h2>Tu perfil</h2>
             <div>
-                <img src="../../Statics/media/PerfilVacio.png" alt="FotoPerfil" height="60" width="60">
+                <img src="'.$_SESSION["Foto_Perfil"].'" alt="FotoPerfil" class="fotito" id="fotitoPerfil">
+            </div>
+            <div class="info" id="oculto">
+                <input accept="image/*" type="file" name="arch" id="agregar">
             </div>
             <div class="info">
-                Usuario: '.$_SESSION["ID_Usuario"].'
+                Usuario: '.$_SESSION["usuario"].'
             </div>
-            <div class="info">
-                Contraseña:
+            <div class="info" id="contraseña">
+                Contraseña: ********
                 <!--para poner la imagen del ojo que abre y cierra-->
             </div>
-            <div class="info">
-                Nombre: '.$_SESSION["Nombre"].'
+            <div class="info" id="nombre">
+                <div>Nombre: </div>
+                <div class="sesion">'.$_SESSION["Nombre"].'</div>
+                <div >
+                    <input class="hidden" id="nomOculto" type="text" name="nombre" maxlength="20" value="'.$_SESSION["Nombre"].'">
+                </div>
             </div>
-            <div class="info">
-                Número de celular: '.$_SESSION["Celular"].'
+            <div class="info" id="celular">
+                <div>Número de celular: </div>
+                <div class="sesion">'.$_SESSION["Celular"].'</div>
+                <div >
+                    <input class="hidden" id="celOculto" type="text" name="celular" minlength="10" maxlength="10" value="'.$_SESSION["Celular"].'">
+                </div>
             </div class="info"> 
-            <div class="info">
-                Instagram: '.$_SESSION["Instagram"].'
+            <div class="info" id="instagram">
+                <div>Instagram: </div>
+                <div class="sesion">'.$_SESSION["Instagram"].'</div>
+                <div>
+                    <input class="hidden" id="instOculto" type="text" name="instagram" value="'.$_SESSION["Instagram"].'">
+                </div>
             </div>
             <div class="Botones">
                 <button class="BotonPerfil" id="Editar">Editar perfil</button>
+                <button class="BotonPerfil" id="listo">Listo</button>
                 <button class="BotonPerfil" id="Salir">Cerrar Sesión</button>
             </div>
         </section>
@@ -81,8 +83,8 @@
                 </div>
             </article>
         </section>-->
-    </main>';
-    ?>
-    <script src="../js/perfil.js"></script>
+    </main>
+    <script src="../js/Perfil.js"></script>';
+?>
 </body>
 </html>
