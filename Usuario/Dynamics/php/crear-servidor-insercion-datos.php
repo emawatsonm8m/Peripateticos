@@ -83,7 +83,7 @@
         $imgPFP = "\"".$imgPFP."\"";
     }
 
-    $peticion = "INSERT INTO club VALUES (0, 7, $nombreClubSanitizado, $descripcionSanitizada, $reglasSanitizadas, $categoriaSanitizada, $propositoSanitizado,$imgPFP,$imgPortada)";
+    $peticion = "INSERT INTO club VALUES (0, 1, $nombreClubSanitizado, $descripcionSanitizada, $reglasSanitizadas, $categoriaSanitizada, $propositoSanitizado,$imgPFP,$imgPortada)";
     $query = mysqli_query($conexion,$peticion);
     if($query==true)
     {

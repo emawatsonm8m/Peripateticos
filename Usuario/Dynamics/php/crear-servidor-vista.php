@@ -7,7 +7,7 @@
             <meta charset='UTF-8'>
             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
             <link rel='stylesheet' href='../../Statics/styles/crear-servidor.css'>
-            <link rel='stylesheet' href='../../libs/bootstrap-5.3.0-dist/css/bootstrap.css'>
+            <link rel='stylesheet' href='../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/css/bootstrap.css'>
             <script src='../js/crear-servidor.js'></script>
             <title>Document</title>
         </head>
@@ -79,7 +79,7 @@
                 </form>
                 <button id='crear'>Crear</button>
             </main>
-            <script src='../../libs/bootstrap-5.3.0-dist/js/bootstrap.bundle.js'></script>
+            <script src='../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/js/bootstrap.bundle.js'></script>
         </body>
         </html>
     ";
