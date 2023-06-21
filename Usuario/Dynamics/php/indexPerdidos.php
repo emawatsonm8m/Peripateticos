@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Statics/styles/indexPerdidos.css">
+    <link rel="stylesheet" href="../../Statics/styles/indexPerdidos.css">
     <title>Objetos Perdidos</title>
 </head>
 <body><!--Barra de Navegacion-->
@@ -46,7 +46,7 @@
             <form>
                 <h2>Última vez vistos</h2>
                 <div class="d-grid gap-2 col-10 mx-auto">
-                    <img src="../Statics/media/puntosPrepa/mapa.jpg" class="img-fluid" id="mapa" usemap="#image-map">
+                    <img src="../../Statics/img/biblio.jpg" class="img-fluid" id="mapa" usemap="#image-map">
                     <button id="btn-back">Regresar</button>
                     <map name="image-map">
                         <area target="" id="Entrada" alt="Entrada" title="Entrada" href="" coords="179,194,199,223" shape="rect">

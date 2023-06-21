@@ -1,5 +1,5 @@
 <?php
-    // session_start();
+     session_start();
     // if(!isset($_SESSION["usuario"])){
     //     header('Location: ../../index.php');
     // }
@@ -14,20 +14,20 @@
 </head>
 <body>
     <?php
-        require"./config.php";
-        $conexion = connect ();
-        if(!$conexion){
-            echo "No se pudo conectar con la base de datos";
-        }else{
-            $sql = "SELECT Nombre, Instagram, Celular, Foto_Perfil FROM usuario WHERE Cuenta = ".$_SESSION['user'];
-            $res = mysqli_query($conexion,$sql);
-            while($respuesta = mysqli_fetch_assoc($res)){
-                $nombre = $respuesta['Nombre'];
-                $instagram = $respuesta['Instagram'];
-                $celular = $respuesta ['Celular'];
-                $fotoPerfil = $respuesta['Foto_Perfil'];
-            }
-        }
+         require "./config.php";
+         $conexion = connect ();
+         if(!$conexion){
+             echo "No se pudo conectar con la base de datos";
+         }else{
+             $sql = "SELECT Nombre, Instagram, Celular, Foto_Perfil FROM usuario WHERE Cuenta = ".$_SESSION['usuario'];
+             $res = mysqli_query($conexion,$sql);
+             while($respuesta = mysqli_fetch_assoc($res)){
+                 $nombre = $respuesta['Nombre'];
+                 $instagram = $respuesta['Instagram'];
+                 $celular = $respuesta ['Celular'];
+                 $fotoPerfil = $respuesta['Foto_Perfil'];
+             }
+         }
 //  <nav class="NavBar">
 //         <ul>
 //             <li><img src="../Statics/media/EscudoP6.png" id="P6" alt="Prepa_6">
