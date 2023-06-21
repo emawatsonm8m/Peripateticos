@@ -42,20 +42,35 @@
     <script src="../../libs/js/momentjs.com_downloads_moment-with-locales.min.js"></script>
     <script src="../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
     <script src="../../libs/cdn.datatables.net_v_dt_dt-1.13.4_datatables.min.js"></script>
+    <script src="../js/navs.js"></script>
     
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+            <img  class="escudop6" id="vacio"src="../../statics/media/EscudoP6.jpg" alt="dos" width="80" height="80" >
+            <img  class="unamescudo" id="vacio"src="../../statics/media/EscudoUNAM.jpg" alt="dos" width="80" height="80" >
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="pagRedireccion"  class="nav-item"><a class="nav-link" href="#" id="pagPrincipal">Página principal</a></li>
+                        <li class="pagRedireccion"  class="nav-item"><a class="nav-link" href="#!" id="ventas">Ventas</a></li>
+                        <li class="pagRedireccion"  class="nav-item"><a class="nav-link" href="#!" id="objPerdidos">Objetos perdidos</a></li>
+                        <li class="pagRedireccion"  class="nav-item"><a class="nav-link" href="#!" id="comunidad" >Comunidad P6</a></li>
+                    </ul>
+                </div>
+            </div>
+            <img  class="fotoUsuario" id="perfil" class="escudop6" id="vacio" src="../../Statics/media/logo.png" alt="UNAM" id="UNAM" width="80" height="80" >
+    </nav>
+
+    <!-- NAV -->
     <nav>
         <section class="img">
-            <img src="../../Statics/media/EscudoP6.jpg" alt="ENP6" id="prepa6">
-        </section>
-        <section class="pags">
-            <article class="pagRedireccion"><button class="boton" >Ventas</button></article>
-            <article class="pagRedireccion"><button class="boton" >Objetos perdidos</button></article>
-            <article class="pagRedireccion"><a href="./comunidad.php">Foro</a></button></article>
-            <article class="fotoUsuario"><img></article> <!--hacer alguna variable para que se guarde la imágen que suba el ususario en el form-->
+        <!-- <img src="../Statics/media/EscudoP6.jpg" alt="ENP6" id="prepa6"> -->
+        <!-- <img src="../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM"> -->
         </section>
     </nav>
+
     <header>
         <h1>Red Coyote</h1>
     </header>

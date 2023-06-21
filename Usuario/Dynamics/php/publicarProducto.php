@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/css/bootstrap.css">
@@ -27,6 +28,7 @@
       <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
     </section>
   </nav>
+
   <!-- Header -->
   <header>
     <h1>Publicar Producto</h1>
