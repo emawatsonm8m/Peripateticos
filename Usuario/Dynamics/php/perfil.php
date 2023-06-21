@@ -39,12 +39,15 @@
     //         </ul>
     //     </nav>
     echo '<main> 
-        <section id="Perfil" class="DatosPerfil">
+        <div "container overflow-hidden text-center">
+            <div class="row gy-5">
+            <!-- Elimine esta clase class="DatosPerfil -->
+            <section id="Perfil" >
             <h2>Tu perfil</h2>
             <div>
-                <img src="../../Statics/media/PerfilVacio.png" alt="FotoPerfil" height="60" width="60">
+                <img src="../../Statics/media/PerfilVacio.png" class="img-fluid"  alt="FotoPerfil" height="60" width="60">
             </div>
-            <div class="info">
+            <div class="info" class="form-control">
                 Usuario: '.$_SESSION["ID_Usuario"].'
             </div>
             <div class="info">
@@ -61,8 +64,8 @@
                 Instagram: '.$_SESSION["Instagram"].'
             </div>
             <div class="Botones">
-                <button class="BotonPerfil" id="Editar">Editar perfil</button>
-                <button class="BotonPerfil" id="Salir">Cerrar Sesión</button>
+                <button type="button"  class="BotonPerfil" class="btn btn-secondary" id="Editar">Editar perfil </button>
+                <button type="button"  class="BotonPerfil" class="btn btn-secondary"  id="Salir">Cerrar Sesión </button>
             </div>
         </section>
         <!-- <section class="Derecha">
@@ -77,10 +80,13 @@
             <article id="Comunidad">
                 <h2>Comunidad</h2>
                 <div id="Publicacion">
+                    
                     <button class="EditPublicacion"></button>
                 </div>
             </article>
         </section>-->
+        </div>
+        </div>
     </main>';
     ?>
     <script src="../js/perfil.js"></script>

@@ -5,7 +5,7 @@
     if(!$conexion){
         echo "No se pudo conectar con la base de datos";
     }else{
-        $sql = "SELECT * FROM usuario WHERE Cuenta = ".$_SESSION['usuario'];
+       $sql = "SELECT * FROM usuario WHERE Cuenta = ".$_SESSION['usuario'];
         $res = mysqli_query($conexion, $sql);
         while($respuesta = mysqli_fetch_assoc($res)){
             $ID_Usuario = $respuesta['ID_Usuario'];
