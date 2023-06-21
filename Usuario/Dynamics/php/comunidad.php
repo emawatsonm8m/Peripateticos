@@ -57,7 +57,7 @@
             <input class="mb-4" type="text" placeholder="Buscar...">
             <!-- lo demas de aqui se haria con la BD y JS-->
             <!-- class="server", esta clase estaba abajo pro la saque por que me estaba dando problemas con la responsividad-->
-            <section  class="btn btn-secondary" id="crear">Crear server</section>
+            <section  class="btn btn-secondary" id="crear"><a href="./crear-servidor-vista.php">Crear server</a></section>
         </aside>
         <section class="servidores">
             <div class="container overflow-hidden">

@@ -5,7 +5,6 @@ window.addEventListener("load", ()=>{
     const comunidad = document.getElementById("comunidad");
     const perfil = document.getElementById("perfil");
     const perdi = document.getElementById("perder");
-    const encontrar = document.getElementById("encontre");
 
     principal.addEventListener("click", ()=>{
         window.location.href = "../php/Inicio.php"; //... debe de ir la ruta faltante
