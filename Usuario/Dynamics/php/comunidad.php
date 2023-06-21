@@ -7,7 +7,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +29,6 @@
         </section>
     </nav>
     <header>
-=======
     <head>
         <!--Estos links contienen "codigo" que ayudan a aplicar el estilo, hacerlo responsivo y algunas animaciones de js, pero yo no use-->
         <meta charset="UTF-8">
@@ -58,7 +56,6 @@
                 </div>
             </div>
         </nav>
->>>>>>> c080d7512252c9534c0294963808fda622c65491
         <h1>Comunidad P6</h1>
     <main>
         <aside id="clubes">

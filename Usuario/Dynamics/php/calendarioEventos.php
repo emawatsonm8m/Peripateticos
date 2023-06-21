@@ -7,15 +7,6 @@ $conexion = connect();
 
 switch ($_GET['accion']) {
 
-case 'agregar':
-    $consulta = "INSERT INTO Eventos (NombreEvento, INICIO, FIN) VALUES ('$_POST[NombreEvento]', '$_POST[INICIO]', '$_POST[FIN]')";
-    mysqli_query($conexion, $consulta);
-    break;
-
-case 'borrar':
-        $consulta = "DELETE FROM Eventos WHERE id = $_POST[id]";
-        mysqli_query($conexion, $consulta);
-        break;
 
     case 'obtener':
         $consulta = "SELECT * FROM Eventos";

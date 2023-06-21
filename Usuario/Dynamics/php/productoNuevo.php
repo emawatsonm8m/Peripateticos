@@ -30,7 +30,6 @@
             <img  class="fotoUsuario" id="perfil" class="escudop6" id="vacio" src="../../Statics/media/logo.png" alt="UNAM" id="UNAM" width="80" height="80" >
         </nav>
 <body>
-<<<<<<< HEAD
     <!-- NAV -->
     <nav>
       <section class="img">
@@ -46,8 +45,6 @@
           <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
       </section>
   </nav>
-=======
->>>>>>> c080d7512252c9534c0294963808fda622c65491
 </body>
 </html>
   <!-- CONTENIDO -->
