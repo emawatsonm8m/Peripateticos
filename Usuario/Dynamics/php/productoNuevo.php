@@ -33,17 +33,10 @@
     <!-- NAV -->
     <nav>
       <section class="img">
-        <img src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
         <!-- <img src="../Statics/media/EscudoP6.jpg" alt="ENP6" id="prepa6"> -->
         <!-- <img src="../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM"> -->
       </section>
-      <section class="pags">
-          <article class="pagRedireccion" id="pagPrincipal"><a href="./Inicio.php">Pagina principal</a></article>
-          <article class="pagRedireccion" id="ventas">Ventas</article>
-          <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
-          <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
-          <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
-      </section>
+      
   </nav>
 </body>
 </html>

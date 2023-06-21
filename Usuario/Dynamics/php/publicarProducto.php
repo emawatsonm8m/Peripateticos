@@ -10,7 +10,7 @@
     
 </body>
 </html>
-<?php
+
     <link rel="stylesheet" href="../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="../../Statics/styles/publicarProducto.css">
     <link rel="stylesheet" href="../../Statics/styles/navs.css">
