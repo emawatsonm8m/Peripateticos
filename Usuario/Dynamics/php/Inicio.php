@@ -1,4 +1,25 @@
 <?php
+    session_start();
+    require "./config.php";
+    $conexion = connect ();
+    if(!$conexion){
+        echo "No se pudo conectar con la base de datos";
+    }else{
+        $sql = "SELECT * FROM usuario WHERE Cuenta = ".$_SESSION['usuario'];
+        $res = mysqli_query($conexion, $sql);
+        while($respuesta = mysqli_fetch_assoc($res)){
+            $ID_Usuario = $respuesta['ID_Usuario'];
+            $nombre = $respuesta['Nombre'];
+            $fotoPerfil = $respuesta['Foto_Perfil'];
+            $instagram = $respuesta['Instagram'];
+            $celular = $respuesta ['Celular'];
+        }
+        $_SESSION["ID_Usuario"] = $ID_Usuario;
+        $_SESSION["Nombre"] = $nombre;
+        $_SESSION["Foto_Perfil"] = $fotoPerfil;
+        $_SESSION["Instagram"] = $instagram;
+        $_SESSION["Celular"] = $celular;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
