@@ -37,7 +37,7 @@
                 if($verificacion){        //verifica que la contraseña sea la misma
                     session_start();
                     $_SESSION["usuario"] = $usuario;
-                    header('Location: ./comunidad.php'); //ruta momentanea
+                    header('Location: ./Inicio.php'); //ruta momentanea
                 }else{
                     echo "Contraseña incorrecta";
                 }
