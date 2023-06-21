@@ -25,12 +25,15 @@
     //         </ul>
     //     </nav>
     echo '<main> 
-        <section id="Perfil" class="DatosPerfil">
+        <div "container overflow-hidden text-center">
+            <div class="row gy-5">
+            <!-- Elimine esta clase class="DatosPerfil -->
+            <section id="Perfil" >
             <h2>Tu perfil</h2>
             <div>
-                <img src="'.$_SESSION["Foto_Perfil"].'" alt="FotoPerfil" class="fotito" id="fotitoPerfil">
+                <img src="'.$_SESSION["Foto_Perfil"].'" alt="FotoPerfil" class="img-fluid" class="fotito" id="fotitoPerfil" alt="FotoPerfil">
             </div>
-            <div class="info" id="oculto">
+            <div class="info" class="form-control" id="oculto">
                 <input accept="image/*" type="file" name="arch" id="agregar">
             </div>
             <div class="info">
@@ -62,9 +65,9 @@
                 </div>
             </div>
             <div class="Botones">
-                <button class="BotonPerfil" id="Editar">Editar perfil</button>
-                <button class="BotonPerfil" id="listo">Listo</button>
-                <button class="BotonPerfil" id="Salir">Cerrar Sesión</button>
+                <button type="button" class="BotonPerfil" class="btn btn-secondary" id="Editar">Editar perfil</button>
+                <button type="button" class="BotonPerfil" class="btn btn-secondary" id="listo">Listo</button>
+                <button type="button" class="BotonPerfil" class="btn btn-secondary" id="Salir">Cerrar Sesión</button>
             </div>
         </section>
         <!-- <section class="Derecha">
@@ -79,10 +82,13 @@
             <article id="Comunidad">
                 <h2>Comunidad</h2>
                 <div id="Publicacion">
+                    
                     <button class="EditPublicacion"></button>
                 </div>
             </article>
         </section>-->
+    </div>
+    </div>
     </main>
     <script src="../js/Perfil.js"></script>';
 ?>

@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>PublicarProducto</title>
+    <link rel="icon" href="../../Statics/media/logo.png" type="image/icon">
+</head>
+<body>
+    
+</body>
+</html>
+<?php
+=======
     <link rel="stylesheet" href="../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="../../Statics/styles/publicarProducto.css">
     <link rel="stylesheet" href="../../Statics/styles/navs.css">
@@ -25,6 +35,7 @@
           <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
       </section>
   </nav>
+>>>>>>> c080d7512252c9534c0294963808fda622c65491
 
       <!-- Header -->
       <header><h1>Publicar Producto</h1></header>

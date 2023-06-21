@@ -37,7 +37,11 @@
                 if($verificacion){        //verifica que la contraseña sea la misma
                     session_start();
                     $_SESSION["usuario"] = $usuario;
+<<<<<<< HEAD
+                    header('Location: ./inicio.php'); //ruta momentanea
+=======
                     header('Location: ./Inicio.php'); //ruta momentanea
+>>>>>>> c080d7512252c9534c0294963808fda622c65491
                 }else{
                     echo "Contraseña incorrecta";
                 }
