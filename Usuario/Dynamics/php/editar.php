@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.php');
+    }
+
     require "config.php";
     require "./sanitizacion.php";
     $conexion = connect ();

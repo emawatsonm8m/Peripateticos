@@ -1,6 +1,10 @@
 <?php
-    echo
-    "
+    session_start();
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.php');
+    }
+    
+    echo"
         <!DOCTYPE html>
         <html lang='en'>
         <head>

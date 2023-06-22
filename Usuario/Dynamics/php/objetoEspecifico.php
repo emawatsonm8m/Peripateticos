@@ -1,11 +1,13 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.php');
+    }
     /*Desarrolador: Luana Alvarez
     Propósito: Este código a través de la cookie enviada por el archivo objetos.js designa el id del objeto seleccionado, para así igualarlo en la petición a mysql
     y poder desplegar toda la información del mismo. A su vez imprime toda la información que recibe y se le da formato con el archivo productoNuevo.css ubicado en 
     la carpeta Statics/style*/ 
-    session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

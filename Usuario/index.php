@@ -1,9 +1,9 @@
 <?php
-    // Si hay una sesion iniciada me redirige a ....
-    /*session_start();
+    // Si existe sesion redirige a inicio
+    session_start();
     if(isset($_SESSION["usuario"])){
-        header('Location: ./Dynamics/php/comunidad.php');
-    }*/
+        header('Location: ./Dynamics/php/inicio.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">

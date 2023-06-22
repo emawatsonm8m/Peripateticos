@@ -1,10 +1,12 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.php');
+    }
     /*Desarrolador: Luana Alvarez
     Propósito: Este código a sirve como maquetado inicial para desplegar absolutamente todos los productos a traves del archivo ventas.js y ventasDB.php; se le da formato
     con el archivo ventas.css ubicado en la carpeta Statics/styles*/ 
-    session_start();
 ?>
-
 <html>
     <head>
         <!--Estos links contienen "codigo" que ayudan a aplicar el estilo, hacerlo responsivo y algunas animaciones de js, pero yo no use-->

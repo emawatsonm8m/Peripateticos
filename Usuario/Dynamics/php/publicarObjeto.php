@@ -1,11 +1,13 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.php');
+    }
     /*Desarrolador: Luana Alvarez
     Propósito: Este código tiene el propósito de permitir publicar a los usuarios algún objeto perdido mediante el uso de un form, cuya información es enviada 
     por método fetch a su respectivo archivo js (publicarObjeto.js), que no solo enviará la información recibida al php de despliegue, si no también, ejecutará
     la parte dinámica de la página, como el mapa interactivo y los alerts. Se le da formato con el archivo publicarProducto.css ubicado en la carpeta Statics/styles*/ 
-    session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,4 +1,8 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.php');
+    }
 /*Desarrolador: Luana Alvarez
 Propósito: Este código tiene como objetivo principal jalar todos los registros de la tabla producto. Lo que hace es que jala todos los registros mediante su ID_Producto,
 que con un while va metiendo dentro de un arreglo. Luego, con un foreach se recorre ese arreglo creado con los id´s recibidos, de tal forma que se puede hacer una
@@ -26,10 +30,4 @@ else{
         $respuesta = mysqli_fetch_assoc($res_info);
         $arregloinfo[]= array("id"=>$respuesta["ID_Producto"], "Nombre"=>$respuesta["NombreProducto"], "Foto"=>$respuesta["Foto"]); //arreglo con todos los productos que hay en la base de datos
     }
-    //var_dump($arregloinfo);
-    echo json_encode($arregloinfo);
-}
-
-
-
 ?>

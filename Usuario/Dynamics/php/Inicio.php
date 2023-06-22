@@ -1,5 +1,10 @@
 <?php
+    // Si no existe sesion, te regresa al iniciar sesion
     session_start();
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.php');
+    }
+
     require "./config.php";
     $conexion = connect ();
     if(!$conexion){
