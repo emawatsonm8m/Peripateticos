@@ -42,7 +42,8 @@
     else
     {
         // Datos del producto //
-        $sql="SELECT NombreProducto, Foto, Descripcion, Costo, FechaVenta, Horario, ID_PuntosPrepa FROM producto NATURAL JOIN puntosprepa WHERE ID_PRODUCTO=14;"; //ASIGNAR ID_PRODUCTO con la vista de productos
+        $id = $_COOKIE["producto"];
+        $sql="SELECT NombreProducto, Foto, Descripcion, Costo, FechaVenta, Horario, ID_PuntosPrepa FROM producto NATURAL JOIN puntosprepa WHERE ID_PRODUCTO=$id;"; //ASIGNAR ID_PRODUCTO con la vista de productos
         $res = mysqli_query($conexion, $sql);
         $respuesta = mysqli_fetch_assoc($res);
         $nombre = $respuesta["NombreProducto"];
@@ -132,6 +133,10 @@
                         <div class="despliegue" id="cuadritos">'; echo $fecha; echo'</div>
                     </div>
                 </div>
+                </div>
+                <div class="centrar">
+                    <div class="text">Costo</div>
+                    <div class="despliegue" id="cuadritos">$'; echo $costo; echo'</div>
                 </div>
             </div>
         </section>
