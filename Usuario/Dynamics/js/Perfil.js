@@ -32,7 +32,6 @@ window.addEventListener("load",()=>{
         })
     })
     agregar.addEventListener("change", e =>{
-        const hola = e.target.files[0].name;
         if(e.target.files[0]){
             const reader = new FileReader();
             reader.onload = function (e){
@@ -40,13 +39,11 @@ window.addEventListener("load",()=>{
             };
             reader.readAsDataURL(e.target.files[0]);
         }
+        agregar.dataset.img = e.target.files[0]
+        agregar.foto = agregar.files[0]
     })
     listo.addEventListener("click", ()=>{
-        // agregar.addEventListener("change", e =>{
-        //     const valorImg = e.target.files[0].name;
-        // })
-        // const valorImg = e.target.files[0].name;
-        // console.log(oculto.e.dataset.name)
+        console.log(agregar.foto)
         const valorNom= nomOculto.value;
         const valorCel= celOculto.value;
         const valorInst= instOculto.value;
@@ -59,7 +56,8 @@ window.addEventListener("load",()=>{
         for(i=0; i<sesion.length; i++)
             sesion[i].style.display="block";
         let datosForm = new FormData();
-        // datosForm.append("img", valorImg)
+        datosForm.append("nomImg", agregar.dataset.img);
+        datosForm.append("img", agregar.foto);
         datosForm.append("nombre", valorNom);
         datosForm.append("celular", valorCel);
         datosForm.append("instagram", valorInst);
