@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="./Statics/styles/forms.css">
+    <link rel="icon" href="./Statics/media/logo.png" type="image/icon">
 </head>
 <body>
     <header>
@@ -28,12 +29,11 @@
                 </label>
             </article>
             <article class="input">
-                <input type="password" name="contraseña" minlength="8" placeholder="                      dd/mm/aaaa" required/>
+                <input type="password" name="contraseña" minlength="8" placeholder="                      Fecha de Nacimiento" required/>
                 <label for="contraseña">
                     <p class="campo">Contraseña:</p>
                 </label>
             </article>
-            <article class="text">Tu contraseña es tu fecha de nacimiento.</article>
             <button type="submit">Iniciar sesion</button>
             <article class="text" id="cambio">Si no tienes una cuenta, <a href="./Dynamics/php/registro.php">crea una.</a></article>
         </form>

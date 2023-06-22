@@ -32,6 +32,7 @@
                     <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
                 </div>
         </nav>
+
     <header class="mb-4">
         <!-- Barrita de busqueda-->
         <!-- <input class="form-control" type="text" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="button-search" />

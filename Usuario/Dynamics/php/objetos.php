@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="../../Statics/styles/objetos.css">
         <link rel="stylesheet" href="../../Statics/styles/navs.css">
         <link rel="icon" href="../../Statics/media/logo.png" type="image/icon">
+        <script src="../js/navs.js"></script>
         <title>Objetos</title>
     </head>
     <body>

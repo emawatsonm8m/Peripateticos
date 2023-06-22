@@ -182,7 +182,11 @@ h3
 } 
 
 /* ==================== PRODUCTO ==================== */
-#producto
+#producto{
+    background-color: blueviolet;
+}
+
+/* #producto
 {
     width: 50%;
     height: 55rem;
@@ -195,7 +199,7 @@ h3
     margin-top: 3.1rem;
     margin-right: 3rem;
     padding: 1%;
-}  
+}   */
 
 #nombre
 {
