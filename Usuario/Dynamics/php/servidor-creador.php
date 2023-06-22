@@ -13,16 +13,9 @@
 <?php
     require "./config.php";
     $conexion = connect (); //Conexión con la base de datos
-    $peticion = "SELECT * FROM club WHERE ID_Club=4"; //petición
+    $peticion = "SELECT * FROM club WHERE ID_Club=6"; //petición
     $query = mysqli_query($conexion, $peticion);
     $info_club = mysqli_fetch_assoc($query); //Información que regreso la petición
-    $info_club["Nombre"] = utf8_encode($info_club["Nombre"]);
-    $info_club["Descripcion"] = utf8_encode($info_club["Descripcion"]);
-    $info_club["Reglas"] = utf8_encode($info_club["Reglas"]);
-    $info_club["Tipo"] = utf8_encode($info_club["Tipo"]);
-    $info_club["Proposito"] = utf8_encode($info_club["Proposito"]);
-    $info_club["PFP"] = utf8_encode($info_club["PFP"]);
-    $info_club["Portada"] = utf8_encode($info_club["Portada"]);
     $info_club["PFP"] = "\"".$info_club['PFP']."\"";
     $info_club["Portada"] = "\"".$info_club['Portada']."\"";
     echo
