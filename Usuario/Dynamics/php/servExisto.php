@@ -3,6 +3,8 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
+        /*Desarrollador: Eduardo Garduño 
+    Proposito: En este archivo se verifica si el club al cual estas buscando ya estas adentro o si por el contrario aun no te has unido*/
 
     require "config.php";
     require "./sanitizacion.php";

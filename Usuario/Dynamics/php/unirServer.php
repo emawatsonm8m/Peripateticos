@@ -3,7 +3,8 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
-
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: En este archivo al unirte al server registra tus datos en la base de datos para saber quienes estan registrados en los clubes*/
     require "config.php";
     require "./sanitizacion.php";
     $conexion = connect ();
