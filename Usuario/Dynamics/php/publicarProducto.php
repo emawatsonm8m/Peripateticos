@@ -1,3 +1,11 @@
+<?php
+    /*Desarrolador: Luana Alvarez
+    Propósito: Este código tiene el propósito de permitir publicar a los usuarios algún objeto perdido mediante el uso de un form, cuya información es enviada 
+    por método fetch a su respectivo archivo js (publicarProducto.js), que no solo enviará la información recibida al php de despliegue, si no también, ejecutará
+    la parte dinámica de la página, como el mapa interactivo y los alerts. Se le da formato con el archivo publicarProducto.css ubicado en la carpeta Statics/styles*/ 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,19 +22,20 @@
 </head>
 
 <body>
-  <!-- NAV -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <img class="img" src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
-              <article class="pagRedireccion" id="ventas">Ventas</article>
-              <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
-              <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
-          </ul>
-          <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
-      </div>
+    <!-- NAV -->
+    <nav>
+      <section class="img">
+          <img src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
+          <!-- <img src="../Statics/media/EscudoP6.jpg" alt="ENP6" id="prepa6"> -->
+          <!-- <img src="../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM"> -->
+      </section>
+      <section class="pags">
+          <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+          <article class="pagRedireccion" id="ventas">Ventas</article>
+          <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
+          <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
+          <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
+      </section>
   </nav>
 
   <!-- Header -->
@@ -124,13 +133,13 @@
           <div id="celular">
             <div id="content">
               <img src="../../Statics/media/publicarProducto/cel.png" class="img-fluid" id="cel">
-              <div id="text">55 </div>
+              <?php echo '<div id="text">'.$_SESSION["Celular"].'</div>'?>
             </div>
           </div>
           <div id="instagram">
             <div id="content2">
               <img src="../../Statics/media/publicarProducto/ig.png" class="img-fluid" id="ig">
-              <div id="text">@</div>
+              <?php echo '<div id="text">'.$_SESSION["Instagram"].'</div>'?>
             </div>
           </div>
         </div>
