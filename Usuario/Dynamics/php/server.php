@@ -3,7 +3,8 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
-
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: En este archivo lo que ocurre es que buscara los datos del club el cual antes fue buscado para que se pueda desplegar la informacion de este*/
     require "config.php";
     require "./sanitizacion.php";
     $conexion = connect ();
