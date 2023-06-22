@@ -53,7 +53,15 @@ Para poder instalar correctamente el proyecto deberá seguir los siguientes paso
 - Modificación de la barra de navegación
 - Conexión entre vistas
 - Revisión de estructura del código
-5. Juan
+5. Ana Pamela Uicab Benavides
 - Páginas responsivas
 - Algunos documentos css
 - Parte de la Vista principal de ventas
+6. Garduño Silverio José Eduardo
+- Vista para Iniciar sesión
+- Contraseña.php genera sal y pim
+- config.php
+- Cerrar sesión 
+- Registrar cambios de perfil
+- Vista de comunidad.php
+- Apoyo a compañeros del proyecto
