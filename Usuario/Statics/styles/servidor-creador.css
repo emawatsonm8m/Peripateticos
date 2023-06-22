@@ -41,6 +41,7 @@ main{ /*Tamaño del contenedor de la info principal*/
     font-size: larger;
     color: #ffffff;
 }
+
 .ElementosBarra{
     display: flex;
     justify-content: flex-start;
@@ -78,27 +79,27 @@ ul{
 
 #PortadaServer{ /*Diseño de la portada del server*/
     width: 100%;
-    height: 8rem;
+    height: 16rem;
     border-radius: 1rem 1rem 0rem 0rem;
-    background-color: #D6D6D6;
 }
 #linkServer{ /*Diseño del boton para conseguir el link del server*/
     width: 1rem;
     position: relative;
     left: 95%;
-    font-size: larger;
+    top: -23rem;
+    font-size: xx-large;
     height: 1.5rem;
     display: flex;
     align-items: center;
+    color: #ffffff;
 }
 #pfpServer{ /*Foto de perfil del server*/
-    height: 4rem;
-    width: 4rem;
+    height: 8rem;
+    width: 8rem;
     border-radius: 5rem;
-    background-color: #737373;
     position: relative;
     left: 1.5rem;
-    top: 4rem;
+    top: -4rem;
 }
 #infoServer{ /*Tamaño del contenedor de la información del server*/
     height: 8rem;
@@ -108,6 +109,8 @@ ul{
     height: 16rem;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    top: -7rem;
 }
 #descipcion{ /*Tamaño del contenedor de la descripción*/
     width: 40%;
@@ -122,10 +125,9 @@ ul{
     border-radius: 0.5rem;
 }
 #editar{ /*Botón para editar*/
-    font-size: small;
     position: relative;
     left: 65rem;
-    top: 3rem;
+    top: -2rem;
     background-color: #FFFFCC;
     border-radius: 1rem;
 }
@@ -139,6 +141,10 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     left: 68rem;
+}
+#chatServer{
+    position: relative;
+    top: -5rem;
 }

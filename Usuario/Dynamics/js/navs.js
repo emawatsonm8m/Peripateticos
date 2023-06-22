@@ -5,16 +5,15 @@ window.addEventListener("load", ()=>{
     const comunidad = document.getElementById("comunidad");
     const perfil = document.getElementById("perfil");
     const perdi = document.getElementById("perder");
-    const encontrar = document.getElementById("encontre");
 
     principal.addEventListener("click", ()=>{
         window.location.href = "../php/Inicio.php"; //... debe de ir la ruta faltante
     })
     ventas.addEventListener("click", ()=>{
-        window.location.href = "../php/productoNuevo.php"; //... debe de ir la ruta faltante
+        window.location.href = "../php/ventas.php"; //... debe de ir la ruta faltante
     })
     objPerdidos.addEventListener("click", ()=>{
-        window.location.href = "../php/indexPerdidos.php"; //... debe de ir la ruta faltante
+        window.location.href = "../php/objetos.php"; //... debe de ir la ruta faltante
     })
     comunidad.addEventListener("click", ()=>{
         window.location.href = "../php/comunidad.php";

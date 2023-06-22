@@ -12,22 +12,19 @@
 </head>
 <body>
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-            <img  class="escudop6" id="vacio"src="../../statics/media/EscudoP6.jpg" alt="dos" width="80" height="80" >
-            <img  class="unamescudo" id="vacio"src="../../statics/media/EscudoUNAM.jpg" alt="dos" width="80" height="80" >
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="pagRedireccion"  class="nav-item"><a class="nav-link" href="#" id="pagPrincipal">Página principal</a></li>
-                        <li class="pagRedireccion"  class="nav-item"><a class="nav-link" href="#!" id="ventas">Ventas</a></li>
-                        <li class="pagRedireccion"  class="nav-item"><a class="nav-link" href="#!" id="objPerdidos">Objetos perdidos</a></li>
-                        <li class="pagRedireccion"  class="nav-item"><a class="nav-link" href="#!" id="comunidad" >Comunidad P6</a></li>
-                    </ul>
-                </div>
-            </div>
-            <img  class="fotoUsuario" id="perfil" class="escudop6" id="vacio" src="../../Statics/media/logo.png" alt="UNAM" id="UNAM" width="80" height="80" >
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="img" src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+            <article class="pagRedireccion" id="ventas">Ventas</article>
+            <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
+            <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
+        </ul>
+        <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
+    </div>
+</nav>
 
       <!-- Header -->
       <header><h1>Publicar Objeto</h1></header>

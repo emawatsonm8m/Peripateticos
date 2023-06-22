@@ -32,11 +32,33 @@ nav{
     border-radius: 20px;
     color: #ffffff;
     background-color: #366372;
+    gap: 2em;
 }
 .fotoUsuario{
     height: 4em;
     width: 4em;
     border-radius: 50%;
     background-color: #366372;
+
+    gap: 2em;
 }
 
+#navbarSupportedContent
+{
+    gap: 2em;
+}
+
+.navbar-nav 
+{
+    gap: 2em;
+}
+
+.collapse 
+{
+    gap: 2em;
+}
+
+nav 
+{
+    background-color: transparent;
+}
