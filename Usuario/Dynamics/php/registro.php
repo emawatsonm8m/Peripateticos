@@ -1,9 +1,8 @@
 <?php
-    // Si hay una sesion iniciada me redirige a ...
-    /*session_start();
+    session_start();
     if(isset($_SESSION["usuario"])){
-        header('Location: ./...');
-    }*/
+        header('Location: ./inicio.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">

@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(isset($_SESSION["usuario"])){
+        header('Location: ./inicio.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +17,6 @@
 </body>
 </html>
 <?php
-    /*session_start();
-    if(isset($_SESSION["usuario"])){
-        header('Location: ./...');
-    }*/
-    
     require "./config.php";
     require "./contraseña.php";
     require "./sanitizacion.php";

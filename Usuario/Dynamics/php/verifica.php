@@ -1,8 +1,8 @@
 <?php
-    /*session_start();
+    session_start();
     if(isset($_SESSION["usuario"])){
-        header('Location: ./...');
-    }*/
+        header('Location: ./inicio.php');
+    }
 
     require "./config.php";
     require "./contraseña.php";

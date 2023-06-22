@@ -1,9 +1,8 @@
 <?php
-//si no hay sesion iniciada te regresa al index
-/*session_start();
-if(!isset($_SESSION["usuario"])){
-    header('Location: ../../index.php');
-}*/
+    session_start();
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
