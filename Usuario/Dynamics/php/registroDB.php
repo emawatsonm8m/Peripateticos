@@ -66,7 +66,8 @@
                     $sql = "INSERT INTO usuario (Cuenta, Nombre, Contraseña, Instagram, Celular, Sal, Foto_Perfil) VALUES ('$user', '$nombre', '$contraHash', '$instagram', '$celular', '$sal', '$nuevaRuta')";
                     $res = mysqli_query($conexion, $sql);
                 }else{
-                    $sql = "INSERT INTO usuario (Cuenta, Nombre, Contraseña, Instagram, Celular, Sal) VALUES ('$user', '$nombre', '$contraHash', '$instagram', '$celular', '$sal')";
+                    $rutaDefecto = "../../Statics/media/fotosPerfil/perfilVacio.png";
+                    $sql = "INSERT INTO usuario (Cuenta, Nombre, Contraseña, Instagram, Celular, Sal, Foto_Perfil) VALUES ('$user', '$nombre', '$contraHash', '$instagram', '$celular', '$sal', '$rutaDefecto')";
                     $res = mysqli_query($conexion, $sql);
                 }
                 // recibe foto de perfil si se hace...
