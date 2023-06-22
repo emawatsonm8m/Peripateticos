@@ -1,19 +1,26 @@
 <?php
-    //si no hay sesion iniciada te regresa al index
-    /*session_start();
-    if(!isset($_SESSION["usuario"])){
-        header('Location: ../../index.php');
-    }*/
+//si no hay sesion iniciada te regresa al index
+/*session_start();
+if(!isset($_SESSION["usuario"])){
+    header('Location: ../../index.php');
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!--Estos links contienen "codigo" que ayudan a aplicar el estilo, hacerlo responsivo y algunas animaciones de js, pero yo no use-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidad P6</title>
     <link rel="stylesheet" href="../../Statics/styles/pagPrincipales.css">
+    <!-- <link rel="stylesheet" href="../../Statics/styles/comunidad.css"> -->
     <link rel="stylesheet" href="../../Statics/styles/navs.css">
     <link rel="icon" href="../../Statics/media/logo.png" type="image/icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
     <script src="../js/navs.js"></script>
 </head>
 <body>
@@ -51,42 +58,50 @@
                 <article class="jDer">Filtrar por</article><!-- justificado Derercha-->
                 <article class="titulos">Tus clubes</article>
             </section>
-            <input class="mb-4" type="text" placeholder="Buscar...">
+            <input class="mb-4" id="buscador" type="text" placeholder="Buscar...">
+            <div class="mb-4" id="resultados"></div>
             <!-- lo demas de aqui se haria con la BD y JS-->
             <!-- class="server", esta clase estaba abajo pro la saque por que me estaba dando problemas con la responsividad-->
-            <section  class="btn btn-secondary" id="crear"><a href="./crear-servidor-vista.php">Crear server</a></section>
+            <section class="btn btn-secondary" id="crear">Crear server</section>
         </aside>
-        <section class="servidores">
-            <div class="container overflow-hidden">
-            <article class="portada"></article>
-            <article class="usuarioPortada"></article>
-            <!-- lo demas de aqui se haria con la BD y JS-->
-            <article class="server" class="btn btn-secondary"  id="unirse">Unirse</article><!-- JS cuando se de click eliminar este boton -->
-            <article class="datos" class="col-6">
-                <div>Nombre del servidor/club</div>
-                <div>Fecha de creacion y creador</div>
-                <div>Categoría</div>
-            </article>
+        <section class="servidores" id="club" style="display: none;">
+            <div class="container overflow-hidden" id="contServidores">
+                <article class="portada" id="portada"></article>
+                <article class="usuarioPortada" id="usuPortada"></article>
+                <!-- lo demas de aqui se haria con la BD y JS-->
+                <article class="server" class="btn btn-secondary" id="unirse">Unirme</article>
+                <!-- JS cuando se de click eliminar este boton -->
+                <article class="server" class="btn btn-secondary" id="salir">Salir</article>
+                <!-- JS cuando se de click eliminar este boton -->
+                <article class="datos" class="col-6" id="datos">
+                    <div id="nombre"></div>
+                    <div id="categoria"></div>
+                </article>
             </div>
             <div class="container overflow-hidden">
-            <article class="info">
-                <div class="cuadros">Descripción: <br></div>
-                <div class="cuadros">Reglas: <br></div>
-            </article>
+                <article class="info">
+                    <div class="cuadros" id="cuadro1">
+                        <div id="descripcion"></div>
+                    </div>
+                    <div class="cuadros" id="cuadro2">
+                        <div id="reglas"></div>
+                    </div>
+                </article>
             </div>
             <div class="container overflow-hidden">
-            <article class="chat">
-                <div>Chat del servidor</div>
-                <div class="fulanitos"><!-- aparece al unirse, diseño, pero se implementara en js -->
-                    <!-- BD -->
-                    <div class="fotitos"></div>
-                    <div class="amigo">Nombre</div>
-                </div>
-            </article>
+                <article class="chat">
+                    <div>Chat del servidor</div>
+                    <div class="fulanitos"><!-- aparece al unirse, diseño, pero se implementara en js -->
+                        <!-- BD -->
+                        <div class="fotitos"></div>
+                        <div class="amigo">Nombre</div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
-    <script src="../js/chat.js"></script>
-    <script src="../js/navs.js"></script>
+    <script src="../js/comunidad.js"></script>
+    <!-- <script src="../js/navs.js"></script> -->
 </body>
+
 </html>
