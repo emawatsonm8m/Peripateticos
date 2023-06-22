@@ -9,47 +9,25 @@
             <link rel='stylesheet' href='../../Statics/styles/crear-servidor.css'>
             <link rel='stylesheet' href='../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/css/bootstrap.css'>
             <script src='../js/crear-servidor.js'></script>
-            <title>Document</title>
+            <link rel='stylesheet' href='../../Statics/styles/navs.css'>
+            <script src='../js/navs.js'></script>
+            <title>Crear Servidor</title>
         </head>
         <body>
-            <br>
             <header>
-                <nav class='navbar navbar-expand-lg bg-body-tertiary'>
-                    <div id='logos'>
-                        <img id='P6' src='../../statics/media/EscudoP6.jpg' alt='Escudo de la P6'></img>
-                        <img id='unam' src='../../statics/media/EscudoUNAM.jpg' alt='Escudo de la UNAM'></img>
-                    </div>
-                    <div class='container-fluid'>
-                        <div class='navbar-brand'></div>
-                        <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-                        <span class='navbar-toggler-icon'></span>
-                        </button>
-                        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-                        <br><br>
-                        <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
-                            <li class='nav-item'>
-                                <button id='pfp' class='nav'></button>
-                            </li>
-                            <br>
-                            <li class='nav-item'>
-                                <button id='paginaPrincipal' class='nav'>Página Principal</button>
-                            </li>
-                            <br>
-                            <li class='nav-item'>
-                                <button id='Ventas' class='nav'>Ventas</button>
-                            </li>
-                            <br>
-                            <li class='nav-item'>
-                                <button id='ObjetosPerdidos' class='nav'>Objetos Perdidos</button>
-                            </li>
-                            <br>
-                            <li>
-                                <button id='ComunidadP6' class='nav'>Comunidad 
-                            </li>
-                        </ul>
-                        </div>
-                    </div>
-                </nav>
+            <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+            <img class='img' src='../../Statics/media/logo.png' alt='Red Coyote' id='prepa6'>
+            <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button>
+            <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+                <ul class='navbar-nav ms-auto mb-2 mb-lg-0'>
+                    <article class='pagRedireccion' id='pagPrincipal'>Pagina principal</article>
+                    <article class='pagRedireccion' id='ventas'>Ventas</article>
+                    <article class='pagRedireccion' id='objPerdidos'>Objetos perdidos</article>
+                    <article class='pagRedireccion' id='comunidad'>Comunidad P6</article>
+                </ul>
+                <article class='fotoUsuario' id='perfil'><!--Foto de usuario BD--></article>
+            </div>
+        </nav>
             </header>
             <main>
                 <h1 id='crearClub'>Crear Club</h1>

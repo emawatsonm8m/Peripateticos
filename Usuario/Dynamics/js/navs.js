@@ -10,10 +10,10 @@ window.addEventListener("load", ()=>{
         window.location.href = "../php/Inicio.php"; //... debe de ir la ruta faltante
     })
     ventas.addEventListener("click", ()=>{
-        window.location.href = "../php/productoNuevo.php"; //... debe de ir la ruta faltante
+        window.location.href = "../php/ventas.php"; //... debe de ir la ruta faltante
     })
     objPerdidos.addEventListener("click", ()=>{
-        window.location.href = "../php/indexPerdidos.php"; //... debe de ir la ruta faltante
+        window.location.href = "../php/objetos.php"; //... debe de ir la ruta faltante
     })
     comunidad.addEventListener("click", ()=>{
         window.location.href = "../php/comunidad.php";
