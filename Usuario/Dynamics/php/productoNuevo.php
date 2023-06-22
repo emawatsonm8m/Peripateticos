@@ -3,6 +3,10 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
+    /*Desarrolador: Luana Alvarez
+    Propósito: Este código a través de la cookie enviada por el archivo ventas.js designa el id del objeto seleccionado, para así igualarlo en la petición a mysql
+    y poder desplegar toda la información del mismo. A su vez imprime toda la información que recibe y se le da formato con el archivo productoNuevo.css Se le da 
+    formato con el archivo publicarProducto.css ubicado en la carpeta Statics/styles*/ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,17 +23,17 @@
 <body>
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img class="img" src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
-                        <article class="pagRedireccion" id="ventas">Ventas</article>
-                        <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
-                        <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
-                    </ul>
-                    <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
-                </div>
+    <img class="img" src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+                <article class="pagRedireccion" id="ventas">Ventas</article>
+                <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
+                <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
+            </ul>
+            <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
+        </div>
     </nav>
 </body>
 </html>
@@ -78,11 +82,11 @@
                 <h3>Contacta al vendedor</h3>
                 <div id="celular">
                     <img src="../../Statics/media/publicarProducto/cel.png" class="img-fluid" id="cel">
-                    <div class="texto">55</div> 
+                    <div class="texto">'.$_SESSION["Celular"].'</div> 
                 </div>
                 <div id="instagram">
                     <img src="../../Statics/media/publicarProducto/ig.png" class="img-fluid" id="ig">
-                    <div class="texto">@</div>
+                    <div class="texto">'.$_SESSION["Instagram"].'</div>
                 </div>
             </article>  
         </aside>  

@@ -3,6 +3,9 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
+    /*Desarrolador: Luana Alvarez
+    Propósito: Este código a sirve como maquetado inicial para desplegar absolutamente todos los productos a traves del archivo ventas.js y ventasDB.php; se le da formato
+    con el archivo ventas.css ubicado en la carpeta Statics/styles*/ 
 ?>
 <html>
     <head>
@@ -28,9 +31,10 @@
                         <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
                         <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
                     </ul>
-                    <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
+                    <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
                 </div>
-    </nav>
+        </nav>
+
     <header class="mb-4">
         <!-- Barrita de busqueda-->
         <!-- <input class="form-control" type="text" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="button-search" />
@@ -42,15 +46,13 @@
                 <div class="col-lg-9" id="productos">
                     <!-- Post content-->
                     <article>
-                        <!-- Este div contiene los productos-->
+                        <!-- Productos-->
                         <div class="container overflow-hidden text-center">
                             <h3>Productos destacados</h3>
                             <div class="row gy-5" id="producto"></div>
                         </div>
-                        <!--Este es el apartado de tus productos con este accedes a ellos (pero aun no sirve )-->
                     </article>
                 </div>
-                <!-- Side widgets -->   
             </div>
             <div class="col-lg-5" id="aside">
                     <h3 id="texto">Publicar producto</h3>

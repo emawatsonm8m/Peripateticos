@@ -3,6 +3,12 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
+    /*Desarrolador: Luana Alvarez
+    Propósito: Este código recibe la información a través del java, aquí se verifica que la información recibida sea correcta y/o existente, y se inserta a la base de datos, 
+    regresando una respuesta a JS mediante echo json_encode indicando si el resgistro se hizo con éxito o no. Existe un if para la ruta de la foto recibida, su función a
+    grandes rasgos es cambiar la ruta temporal por una nueva, y meter el archivo a su carpeta correspondiente. Por otro lado, existe un if, para distinguir qué punto de la 
+    prepa fue seleccionado, de tal forma que esa información se pueda ingresar a la base de datos de acuerdo a su ID y no a la cadena de texto, facilitando así el procesamiento
+    y el almacenamiento de la información. En síntesis, almacena en la base de datos toda la información recibida en el forms de publicarProducto.php*/ 
 
     require "config.php";
     $conexion = connect();
@@ -19,7 +25,7 @@
         $lugar = (isset($_POST["lugar"]) && $_POST["lugar"] != "")? $_POST["lugar"] : false;
         $hora = (isset($_POST["hora"]) && $_POST["hora"] != "")? $_POST["hora"] : false;
 
-        if($_FILES["arch"])
+        if($_FILES["arch"])//Cambia ruta temporal por una nueva y guarda el archivo en la carpeta (../../Statics/img)
         {
                 $arch = $_FILES["arch"];
                 $name = $arch["name"];
@@ -33,7 +39,7 @@
                 rename($ruta_temp,$nuevaRuta);
         }
 
-        if($lugar==true)
+        if($lugar==true)//Verifica cuál fue el lugar seleccionado y se le asigna su respectivo valor en la base de datos
         {
             if($lugar=="Entrada")
                 $lugar = 1;
@@ -59,9 +65,9 @@
                     $lugar = 11;
         }
         
-        if($nombre && $nuevaRuta && $descripcion && $costo && $fecha && $lugar && $hora)
+        if($nombre && $nuevaRuta && $descripcion && $costo && $fecha && $lugar && $hora)//Mete la informacion a la base de datos
         {
-            $usuario = 1; //CAMBIAR USUARIO CON SESIONES
+            $usuario = $_SESSION["ID_Usuario"] //CAMBIAR USUARIO CON SESIONES
             $sql = "INSERT INTO producto ( ID_Usuario, ID_PuntosPrepa, NombreProducto, Foto, Descripcion, Costo, FechaVenta, Horario)
             VALUES ($usuario, $lugar,'$nombre', '$nuevaRuta', '$descripcion', $costo, '$fecha', '$hora')";
             $res = mysqli_query($conexion, $sql);
