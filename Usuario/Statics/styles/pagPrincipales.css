@@ -22,19 +22,16 @@ header{
 }
 main{
     display: flex;
-<<<<<<< HEAD
     background-color: #D9D9D9;
     margin: auto;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
     flex-flow:wrap;
-=======
     min-height: 440px;
     max-height: 440px;
     /* overflow: hidden; */
     /* overflow: scroll; */
->>>>>>> 1072939e51fc815ff123b2b7d290c1e151d96549
 }
 
 /* = ASIDES
@@ -100,7 +97,6 @@ input{
     border-radius: 0 20px 20px 0;
     background-color: #EAEAEA;
 }
-<<<<<<< HEAD
 
 /* = Botones
 -----------------------------------------------*/
@@ -124,7 +120,6 @@ div{
     display: flex;
     margin: auto;
     text-align: justify;
-=======
 .portada{
     height: 7.5em;
     border-radius: 20px 20px 0 0;
@@ -185,5 +180,4 @@ div{
     margin: 0 0 0 2%;
     border-radius: 50%;
     background-color: #5796BA;
->>>>>>> 1072939e51fc815ff123b2b7d290c1e151d96549
 }
