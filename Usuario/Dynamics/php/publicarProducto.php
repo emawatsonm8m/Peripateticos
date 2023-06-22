@@ -1,3 +1,11 @@
+<?php
+    /*Desarrolador: Luana Alvarez
+    Propósito: Este código tiene el propósito de permitir publicar a los usuarios algún objeto perdido mediante el uso de un form, cuya información es enviada 
+    por método fetch a su respectivo archivo js (publicarProducto.js), que no solo enviará la información recibida al php de despliegue, si no también, ejecutará
+    la parte dinámica de la página, como el mapa interactivo y los alerts. Se le da formato con el archivo publicarProducto.css ubicado en la carpeta Statics/styles*/ 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +30,7 @@
           <article class="pagRedireccion" id="ventas">Ventas</article>
           <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
           <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
-          <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
+          <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
       </section>
   </nav>
 
@@ -108,17 +116,17 @@
             <!-- Datos de Contacto -->
               <div class="contacto" id="centrar">
                 <h3>Datos de contacto</h3>
-                <div class="texto">Recuerda que tus datos de contacto son los que registraste en <a href="../perfil...">tu perfil</a>.</div>
+                <div class="texto">Recuerda que tus datos de contacto son los que registraste en <a href="./perfil.php">tu perfil.</a></div>
                 <div id="celular">
                   <div id="content">
                     <img src="../../Statics/media/publicarProducto/cel.png" class="img-fluid" id="cel">
-                    <div id="text">55 </div>
+                    <?php echo '<div id="text">'.$_SESSION["Celular"].'</div>'?>
                   </div>
                 </div>
                 <div id="instagram">
                   <div id="content2">
                     <img src="../../Statics/media/publicarProducto/ig.png" class="img-fluid" id="ig">
-                    <div id="text">@</div>
+                    <?php echo '<div id="text">'.$_SESSION["Instagram"].'</div>'?>
                   </div>
                 </div>
               </div>

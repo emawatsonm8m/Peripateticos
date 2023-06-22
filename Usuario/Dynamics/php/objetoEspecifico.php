@@ -1,3 +1,11 @@
+<?php
+    /*Desarrolador: Luana Alvarez
+    Propósito: Este código a través de la cookie enviada por el archivo objetos.js designa el id del objeto seleccionado, para así igualarlo en la petición a mysql
+    y poder desplegar toda la información del mismo. A su vez imprime toda la información que recibe y se le da formato con el archivo productoNuevo.css ubicado en 
+    la carpeta Statics/style*/ 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +30,7 @@
           <article class="pagRedireccion" id="ventas">Ventas</article>
           <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
           <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
-          <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
+          <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
       </section>
   </nav>
 </body>
@@ -69,11 +77,11 @@
                 <h3>Contacta a quien publicó</h3>
                 <div id="celular">
                     <img src="../../Statics/media/publicarProducto/cel.png" class="img-fluid" id="cel">
-                    <div class="texto">55</div> 
+                    <div class="texto">'.$_SESSION["Celular"].'</div> 
                 </div>
                 <div id="instagram">
                     <img src="../../Statics/media/publicarProducto/ig.png" class="img-fluid" id="ig">
-                    <div class="texto">@</div>
+                    <div class="texto">'.$_SESSION["Instagram"].'</div>
                 </div>
             </article>  
         </aside>  

@@ -1,3 +1,8 @@
+  /*Desarrolador: Luana Alvarez
+  Propósito: Este código recibe la información del formulario en el archivo publicarObjeto.php y la envía al archivo publicarObjetoDB mediante el metodo
+  fetch donde se guardará la información enviada. Por otro lado, este java hace la función del mapa interactivo mediante el uso de id´s y un mapeo; a su
+  vez hace un preview de la imagen que se subirá reemplazando la original por la nueva; y genera alerts en caso de que no se reciba toda la información 
+  requerida, solicitando al usuario que llene los campos faltantes.*/ 
 window.addEventListener("load", () =>
 {
     const img = document.getElementById("default");

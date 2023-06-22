@@ -1,3 +1,10 @@
+<?php
+    /*Desarrolador: Luana Alvarez
+    Propósito: Este código a sirve como maquetado inicial para desplegar absolutamente todos los objetos a traves del archivo objetos.js y objetosDB.php; se le da formato
+    con el archivo objetos.css ubicado en la carpeta Statics/styles*/ 
+    session_start();
+?>
+
 <html>
     <head>
         <!--Estos links contienen "codigo" que ayudan a aplicar el estilo, hacerlo responsivo y algunas animaciones de js, pero yo no use-->
@@ -11,19 +18,19 @@
     </head>
     <body>
         <!-- NAV -->
-    <nav>
-      <section class="img">
-        <img src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
-        <!-- <img src="../Statics/media/EscudoP6.jpg" alt="ENP6" id="prepa6"> -->
-        <!-- <img src="../Statics/media/EscudoUNAM.jpg" alt="UNAM" id="UNAM"> -->
-      </section>
-      <section class="pags">
-          <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
-          <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
-          <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
-          <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
-      </section>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img class="img" src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+                    <article class="pagRedireccion" id="ventas">Ventas</article>
+                    <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
+                    <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
+                </ul>
+                <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
+            </div>
+    </nav>
     <header class="mb-4">
         <!-- Barrita de busqueda-->
         <!-- <input class="form-control" type="text" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="button-search" />
