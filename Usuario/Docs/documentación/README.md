@@ -53,4 +53,7 @@ Para poder instalar correctamente el proyecto deberá seguir los siguientes paso
 - Modificación de la barra de navegación
 - Conexión entre vistas
 - Revisión de estructura del código
-
+5. Juan
+- Páginas responsivas
+- Algunos documentos css
+- Parte de la Vista principal de ventas
