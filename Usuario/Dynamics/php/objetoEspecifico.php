@@ -37,7 +37,8 @@
     else
     {
         // Datos del producto //
-        $sql="SELECT NombreObjeto, Foto, Descripcion, Recompensa, Fecha, ID_PuntosPrepa FROM objeto NATURAL JOIN puntosprepa WHERE ID_OBJETO=3;"; //ASIGNAR ID_PRODUCTO con la vista de productos
+        $id = $_COOKIE["objeto"];
+        $sql="SELECT NombreObjeto, Foto, Descripcion, Recompensa, Fecha, ID_PuntosPrepa FROM objeto NATURAL JOIN puntosprepa WHERE ID_OBJETO=$id;"; //ASIGNAR ID_PRODUCTO con la vista de productos
         $res = mysqli_query($conexion, $sql);
         $respuesta = mysqli_fetch_assoc($res);
         $nombre = $respuesta["NombreObjeto"];
