@@ -40,6 +40,7 @@ window.addEventListener("load",()=>{
             return respuesta.json();
         }).then((datosJSON)=>{
             console.log(datosJSON);
+            window.location.href= "../php/servidor-creador.php";
         });
     });
 });

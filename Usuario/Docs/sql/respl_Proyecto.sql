@@ -176,7 +176,7 @@ CREATE TABLE `objeto` (
   KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`),
   CONSTRAINT `objeto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
   CONSTRAINT `objeto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -185,7 +185,7 @@ CREATE TABLE `objeto` (
 
 LOCK TABLES `objeto` WRITE;
 /*!40000 ALTER TABLE `objeto` DISABLE KEYS */;
-INSERT INTO `objeto` VALUES (3,1,1,'Dignidad','../../Statics/imgobj/momazo.jpg','Si la ven por ahí díganle que vuelva','Una relación bonita y estable.','2023-02-03','');
+INSERT INTO `objeto` VALUES (3,1,1,'Dignidad','../../Statics/imgobj/momazo.jpg','Si la ven por ahí díganle que vuelva','Una relación bonita y estable.','2023-02-03',''),(4,1,4,'Lapicera','../../Statics/imgobj/lapicera.jpg','Encontramos tu pumamada, caéle al 552 con unas papas y te la regreso','Unas papas','2023-06-21','');
 /*!40000 ALTER TABLE `objeto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -213,7 +213,7 @@ CREATE TABLE `producto` (
   KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`),
   CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
   CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -222,7 +222,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (14,1,5,'Gomitas Magicas','../../Statics/img/gomitas.jpg','Gomitas para darte un viajesote como el que se da Lund antes de entrar a dar clase. Ojo, pegan fuerte. $60 c/u',60.00,0,'2023-06-23',0,'20:45:00');
+INSERT INTO `producto` VALUES (14,1,5,'Gomitas Magicas','../../Statics/img/gomitas.jpg','Gomitas para darte un viajesote como el que se da Lund antes de entrar a dar clase. Ojo, pegan fuerte. $60 c/u',60.00,0,'2023-06-23',0,'20:45:00'),(16,1,7,'Palomitas','../../Statics/img/palomitas.jpg','Palomitas buenísimas para la salud.',20.00,0,'2023-06-30',0,'21:50:00'),(17,1,4,'Enjambre','../../Statics/img/enjambre.jpg','Deliciosos enjambres de cereal con chocolate.',25.00,0,'2023-06-23',0,'14:40:00'),(18,1,4,'Pay de Limón','../../Statics/img/pay.jpg','100% casero, sabe joya',25.00,0,'2023-07-24',0,'17:50:00'),(19,1,10,'Galletas del Costco','../../Statics/img/galletas.jpg','Mañana estaré llevando galletitas del Costco, $10c/u:)',10.00,0,'2023-06-22',0,'09:00:00');
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -299,7 +299,7 @@ CREATE TABLE `usuario` (
   `Pim` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID_Usuario`),
   UNIQUE KEY `Cuenta` (`Cuenta`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -308,7 +308,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,322100000,'Prueba','prueba123',NULL,'',0,NULL,NULL);
+INSERT INTO `usuario` VALUES (1,322100000,'Prueba','prueba123',NULL,'',0,NULL,NULL),(2,322157000,'Luana','b92ab7ea80e99ee043251a3186d1d3d87a0474a44c1ec50aeb98f2f908380ce7',NULL,'@tilin',5529391270,'6492554b654ae',NULL);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -321,4 +321,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-20 17:19:31
+-- Dump completed on 2023-06-21 19:12:55

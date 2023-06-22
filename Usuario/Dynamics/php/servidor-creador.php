@@ -13,9 +13,11 @@
 <?php
     require "./config.php";
     $conexion = connect (); //Conexión con la base de datos
-    $peticion = "SELECT * FROM club WHERE ID_Club=1"; //petición
+    $peticion = "SELECT * FROM club WHERE ID_Club=6"; //petición
     $query = mysqli_query($conexion, $peticion);
     $info_club = mysqli_fetch_assoc($query); //Información que regreso la petición
+    $info_club["PFP"] = "\"".$info_club['PFP']."\"";
+    $info_club["Portada"] = "\"".$info_club['Portada']."\"";
     echo
     "
         <!DOCTYPE html>
@@ -23,7 +25,7 @@
         <head>
             <meta charset='UTF-8'>
             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-            <link rel='stylesheet' href='../../libs/bootstrap-5.3.0-dist/css/bootstrap.css'>
+            <link rel='stylesheet' href='../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/css/bootstrap.css'>
             <link rel='stylesheet' href='../../Statics/styles/servidor-creador.css'>
             <script src='../js/servidor-creador.js'></script>
             <title>Document</title>
@@ -69,14 +71,12 @@
                 </nav>
             </header>
             <main>
-                <div id='PortadaServer'>
-                    <div id='linkServer'>...</div>
-                    <div id='pfpServer'></div>
-                    <button id='editar'>Editar</button>
-                </div>
+                <img id='PortadaServer' src=".$info_club["Portada"]." alt='Portada del servidor'></img>
+                <img id='pfpServer' src=".$info_club["PFP"]." alt='Foto de perfil del servidor'></img>
+                <button id='editar'>Editar</button>
+                <div id='linkServer'>...</div>
                 <section id='infoServer'>
                     <article id='nombreServer' class='infoServer'>Nombre del servidor: ".$info_club["Nombre"]."</article>
-                    <article id='fechaCreacion-creador' class='infoServer'>Fecha de creación y creador: </article>
                     <article id='categoria' class='infoServer'>Categoria: ".$info_club["Tipo"]."</article>
                 </section>
                 <section id='descripcion_reglas'>
@@ -88,7 +88,7 @@
                     <div id='agregarMSJ'>+</div>
                 </section>
             </main>
-            <script src='../../libs/bootstrap-5.3.0-dist/js/bootstrap.bundle.js'></script>
+            <script src='../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/js/bootstrap.bundle.js'></script>
         </body>
         </html>
     ";

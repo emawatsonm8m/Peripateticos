@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require "./config.php";
     require "./sanitizacion.php";
 
@@ -83,7 +84,8 @@
         $imgPFP = "\"".$imgPFP."\"";
     }
 
-    $peticion = "INSERT INTO club VALUES (0, 7, $nombreClubSanitizado, $descripcionSanitizada, $reglasSanitizadas, $categoriaSanitizada, $propositoSanitizado,$imgPFP,$imgPortada)";
+    // $peticion = "INSERT INTO club VALUES (0, $_SESSION['usuario'], $nombreClubSanitizado, $descripcionSanitizada, $reglasSanitizadas, $categoriaSanitizada, $propositoSanitizado,$imgPFP,$imgPortada)";
+    $peticion = "INSERT INTO club VALUES (0, 1, $nombreClubSanitizado, $descripcionSanitizada, $reglasSanitizadas, $categoriaSanitizada, $propositoSanitizado,$imgPFP,$imgPortada)";
     $query = mysqli_query($conexion,$peticion);
     if($query==true)
     {

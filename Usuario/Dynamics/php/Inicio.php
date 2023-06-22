@@ -33,6 +33,7 @@
     <!--Scripts css-->
     <link rel="stylesheet" href="../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../libs/css/cdn.datatables.net_v_dt_dt-1.13.4_datatables.min.css">
+    <link rel="stylesheet" href="../../Statics/styles/navs.css">
     <!--Scripts js-->
     <script src="../../libs/fullcalendar-6.1.8/dist/index.global.min.js"></script>
     <script src="../../libs/js/code.jquery.com_jquery-3.7.0.min.js"></script>
@@ -42,20 +43,24 @@
     <script src="../../libs/js/momentjs.com_downloads_moment-with-locales.min.js"></script>
     <script src="../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
     <script src="../../libs/cdn.datatables.net_v_dt_dt-1.13.4_datatables.min.js"></script>
+    <script src="../js/navs.js"></script>
     
 </head>
 <body>
-    <nav>
-        <section class="img">
-            <img src="../../Statics/media/EscudoP6.jpg" alt="ENP6" id="prepa6">
-        </section>
-        <section class="pags">
-            <article class="pagRedireccion"><button class="boton" >Ventas</button></article>
-            <article class="pagRedireccion"><button class="boton" >Objetos perdidos</button></article>
-            <article class="pagRedireccion"><a href="./comunidad.php">Foro</a></button></article>
-            <article class="fotoUsuario"><img></article> <!--hacer alguna variable para que se guarde la imágen que suba el ususario en el form-->
-        </section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img class="img" src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+                        <article class="pagRedireccion" id="ventas">Ventas</article>
+                        <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
+                        <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
+                    </ul>
+                    <article class="fotoUsuario" id="perfil"><!--Foto de usuario BD--></article>
+                </div>
     </nav>
+
     <header>
         <h1>Red Coyote</h1>
     </header>
