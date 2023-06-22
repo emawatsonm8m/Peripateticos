@@ -1,4 +1,7 @@
 <?php
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: Este archivo es la conexion con la base de datos para que pudieramos interactuar con esta con ayuda de php*/
+    
     const DBHOST = "localhost";
     const DBUSER = "root";
     const DBPASS = "";

@@ -4,6 +4,8 @@
     if(isset($_SESSION["usuario"])){
         header('Location: ./Dynamics/php/inicio.php');
     }
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: En esta pagina se iniciara sesion y cada quien tendra su propia cuenta, ya que se pide el numero de cuenta para iniciar sesion*/
 ?>
 <!DOCTYPE html>
 <html lang="es">

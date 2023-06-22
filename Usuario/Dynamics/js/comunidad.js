@@ -1,3 +1,8 @@
+/*Desarrollador: Eduardo Garduño 
+Proposito: Esta pagina es la encargada del funcionamiento mayormente de la pagina comunidad, ya que mediante eventos
+y peticiones fetch conectamos con php y de ahi sacamos informacion de la base de datos, con la cual se realiza el funcionamiento
+del buscador, del redireccinamiento a la pagina de crear servidor, el despliegue de informacion del servidor seleccionado
+y nos permite unirnos o salirnos del servidor en el momento que deseemos*/
 window.addEventListener("load", ()=>{
     const crear = document.getElementById("crear");
     const unirse = document.getElementById("unirse")

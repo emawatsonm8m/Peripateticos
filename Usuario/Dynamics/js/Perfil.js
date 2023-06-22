@@ -1,3 +1,7 @@
+/*Desarrollador: Eduardo Garduño 
+Proposito: Este archivo es el encargado de recibir toda la informacion que esta en perfil.php para que con peticiones 
+fetch podamos editarla, estas mandan la informacion a un php que se encarga de hacerle peticiones a la base de datos para 
+poder actualizarla y asi los datos de los usuarios pueda ser cambiada*/
 window.addEventListener("load",()=>{
     const EDITAR = document.getElementById("Editar");
     const SALIR = document.getElementById("Salir");

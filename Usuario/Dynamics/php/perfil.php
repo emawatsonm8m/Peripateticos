@@ -3,6 +3,9 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: Este archivo es el encargado de poder revisar nuestra informacion personal con la cual nos registramos, pero solo nos permitira 
+    editar el nombre, celular, foto de perfil e instragram*/
 ?>
 <!DOCTYPE html>
 <html lang="en">

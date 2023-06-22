@@ -3,6 +3,11 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: Este archivo sirve para editar los datos del usuario, permitimos que cambien su foto de perfil, su nombre, celular e instagram
+    pero antes de realizar los cambios se verifica que la informacion que mande el usuario no contenga datos que puedan afectar nuestra base 
+    de datos, a traves de funciones de sanitizacion y regex, si la informacion es aceptada se hacen peticiones a la base de datos, en la cual 
+    actualizaremos los registros*/
 
     require "config.php";
     require "./sanitizacion.php";

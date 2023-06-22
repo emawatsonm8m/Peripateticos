@@ -3,6 +3,9 @@
     if(isset($_SESSION["usuario"])){
         header('Location: ./inicio.php');
     }
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: En esta pagina las personas podran registrarse con su numero de cuenta, una contraseña, su nombre, celular e instagram,
+    estos dos ultimos para que sea mas facil contactar a la persona*/
 ?>
 <!DOCTYPE html>
 <html lang="es">

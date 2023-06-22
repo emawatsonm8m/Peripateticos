@@ -3,6 +3,12 @@
     if(isset($_SESSION["usuario"])){
         header('Location: ./inicio.php');
     }
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: En esta pagina se obtienen los datos que manda el usuario en registro.php, para poder ser guardados en la base de datos, no sin
+    antes pasar por ciertos filtros para que no puedan poner cosas sin sentido o incluso perjudicar nuestra base de datos, esto fue hecho mediante
+    funciones de sanitizacion y como segundo filtro regex, si se nota algo raro en lo que manda el usuario la pagina le avisara en donde debe
+    cambiar la informacion para poder registrarse y pueda disfrutar de nuestros servicios, esta pagina nos redirigira a iniciar sesion para comenzar
+    con los datos registrados aqui*/
 ?>
 <!DOCTYPE html>
 <html lang="en">

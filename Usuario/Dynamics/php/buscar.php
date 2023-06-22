@@ -1,9 +1,11 @@
 <?php
     session_start();
-    session_start();
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: Este archivo es el encargado de hacer una peticion a la base de datos con la cual con cada click a una tecla nos ira desplegando
+    los servidores que contenga las coincidencias de las letras ocupadas*/
     
     require "config.php";
     require "./sanitizacion.php";

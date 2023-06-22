@@ -3,9 +3,11 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: En este archivo se realiza una peticion a la base de datos, en la cual borraremos datos de una columna, esto porque a traves
+    de una peticion fetch en js se pide salirse de un club y borramos el registro del usuario de ese club*/
 
     require "config.php";
-    require "./sanitizacion.php";
     $conexion = connect ();
     if(!$conexion){
         echo "No se puedo conectar la base";

@@ -3,6 +3,10 @@
     if(isset($_SESSION["usuario"])){
         header('Location: ./inicio.php');
     }
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: Esta pagina es la que se encargara de recibir la informacion de inicio de sesion, en la cual antes sera pasada por un filtro para
+    que nuestra base de datos no pueda ser afectado, tanto por funciones de sanitizacion como por regex, si no hay nada extraño se verifica si la
+    informacion que fue agregada ya existe y es correcta, si todo esta bien podra entrar a la pagina principal y se iniciara sesion*/
 
     require "./config.php";
     require "./contraseña.php";

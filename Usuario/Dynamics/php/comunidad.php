@@ -3,6 +3,10 @@
     if(!isset($_SESSION["usuario"])){
         header('Location: ../../index.php');
     }
+    /*Desarrollador: Eduardo Garduño 
+    Proposito: Esta pagina es la vista principal de los servidores, en la cual tenemos un buscador y nos permitira buscar servidores por su
+    nombre, en los cuales podremos conectarnos e interactuar con las demas personas, hablar sobre temas de interes y hacer buenos amigos, tambien
+    al encontrar el servidor que queramos al seleccionar una opcion nos desplegara los datos del servidor y podremos unirnos o salirnos*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
