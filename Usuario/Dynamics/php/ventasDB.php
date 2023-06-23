@@ -30,4 +30,6 @@ else{
         $respuesta = mysqli_fetch_assoc($res_info);
         $arregloinfo[]= array("id"=>$respuesta["ID_Producto"], "Nombre"=>$respuesta["NombreProducto"], "Foto"=>$respuesta["Foto"]); //arreglo con todos los productos que hay en la base de datos
     }
+    echo json_encode($arregloinfo);
+}
 ?>

@@ -67,7 +67,7 @@
         
         if($nombre && $nuevaRuta && $descripcion && $costo && $fecha && $lugar && $hora)//Mete la informacion a la base de datos
         {
-            $usuario = $_SESSION["ID_Usuario"] //CAMBIAR USUARIO CON SESIONES
+            $usuario = $_SESSION["ID_Usuario"]; //CAMBIAR USUARIO CON SESIONES
             $sql = "INSERT INTO producto ( ID_Usuario, ID_PuntosPrepa, NombreProducto, Foto, Descripcion, Costo, FechaVenta, Horario)
             VALUES ($usuario, $lugar,'$nombre', '$nuevaRuta', '$descripcion', $costo, '$fecha', '$hora')";
             $res = mysqli_query($conexion, $sql);
