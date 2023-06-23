@@ -21,20 +21,20 @@
     <script src="../js/navs.js"></script>
 </head>
 <body>
-    <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img class="img" src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
-                <article class="pagRedireccion" id="ventas">Ventas</article>
-                <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
-                <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
-            </ul>
-            <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
-        </div>
-    </nav>
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<img class="img" src="../../Statics/media/logo.png" alt="Red Coyote" id="prepa6">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <article class="pagRedireccion" id="pagPrincipal">Pagina principal</article>
+            <article class="pagRedireccion" id="ventas">Ventas</article>
+            <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
+            <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
+        </ul>
+        <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
+    </div>
+</nav>
 </body>
 </html>
   <!-- CONTENIDO -->
