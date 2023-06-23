@@ -65,7 +65,7 @@
         
         if($nombre && $nuevaRuta && $descripcion && $fecha && $fecha && $recompensa && $lugar)//Mete la informacion a la base de datos
         {
-            $usuario = $_SESSION["ID_Usuario"] 
+            $usuario = $_SESSION["ID_Usuario"];
             $sql = "INSERT INTO objeto (ID_Usuario, ID_PuntosPrepa, NombreObjeto, Foto, Descripcion, Recompensa, Fecha)
             VALUES ($usuario, $lugar,'$nombre', '$nuevaRuta', '$descripcion', '$recompensa', '$fecha')";
             $res = mysqli_query($conexion, $sql);

@@ -93,14 +93,12 @@ h3
 {
     background-color: rgb(234, 234, 234);
     border-radius: 15px;
-    width:100%;
     display:grid;
     height: 57rem;
     justify-content: center;
     margin: 6%;
     margin-top: 0%;
     overflow: auto;
-    align-self: left;
 }
 
 #imagen
