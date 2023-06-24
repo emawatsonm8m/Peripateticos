@@ -16,6 +16,20 @@ window.addEventListener("load", ()=>{
     const cuadro2 = document.getElementById("cuadro2");
     const clubsito = document.getElementById("club");
     const contServidores = document.getElementById("contServidores");
+    let x = 0;
+    let i = 0;
+    let unido = [];
+    let ID_Usuario;
+    let ID_Club;
+
+    fetch("../php/ID_Usuario.php")
+    .then((respuesta)=>{
+        return respuesta.json();
+    }).then((datosJSON)=>{
+        console.log(datosJSON);
+        ID_Usuario=datosJSON;
+        console.log(ID_Usuario);
+    })
 
     crear.addEventListener("click", ()=>{
         window.location.href="./crear-servidor-vista.php";
@@ -53,7 +67,7 @@ window.addEventListener("load", ()=>{
             }).then((respuesta)=>{
                 return respuesta.json();
             }).then((datosJSON)=>{
-                // console.log(datosJSON)
+                console.log("gomitas");
                 for(let dato of datosJSON){
                     if(dato.portada){
                         portada.innerHTML = `
@@ -71,8 +85,40 @@ window.addEventListener("load", ()=>{
                     reglas.innerHTML =`
                     Reglas:<br>${dato.Reglas}`;
                     unirse.dataset.club = dato.ID_Club;
+                    ID_Club = dato.ID_Club;
+                    document.cookie ="ID_CLUB=" + ID_Club + "; max-age=60";
                 }
             })
+            fetch("../php/miembro.php")
+            .then((respuesta)=>{
+                return respuesta.json();
+            }).then((datosJSON)=>{
+                console.log(datosJSON);
+                datosJSON.forEach( () => {
+                    console.log(datosJSON[i]);
+                    if(datosJSON[i].ID_Usuario==ID_Usuario)
+                    {
+                        if(datosJSON[i].ID_Club==ID_Club)                        
+                            unido.push(true);
+                        else
+                            unido.push(false);
+                    }
+                    else
+                        unido.push(false);
+                    i++; 
+                });
+                
+                console.log(unido);
+                unido.forEach(() => {
+                    if(unido[x]==true)
+                    {
+                        
+                        window.location.href = "../php/servidor-creador.php";
+                        console.log(datosJSON);
+                    }
+                    x++;
+                });
+            });
         }
     })
     fetch("./servExisto.php")

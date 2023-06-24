@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servidor-Creador</title>
     <link rel="icon" href="../../Statics/media/logo.png" type="image/icon">
+    <link rel='stylesheet' href='../../Statics/styles/servidor-creador.css'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src='../js/servidor-creador.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -32,64 +34,20 @@
 </html>
 <?php
     require "./config.php";
+    require "./sanitizacion.php";
+
     $conexion = connect (); //Conexión con la base de datos
-    $peticion = "SELECT * FROM club WHERE ID_Club=6"; //petición
+    $ID_CLUB_Sanitizado = $_COOKIE["ID_CLUB"];
+    $ID_CLUB_Sanitizado = (int)$ID_CLUB_Sanitizado;
+    $peticion = "SELECT * FROM club WHERE ID_Club=$ID_CLUB_Sanitizado"; //petición
     $query = mysqli_query($conexion, $peticion);
     $info_club = mysqli_fetch_assoc($query); //Información que regreso la petición
     $info_club["PFP"] = "\"".$info_club['PFP']."\"";
     $info_club["Portada"] = "\"".$info_club['Portada']."\"";
     echo
     "
-        <!DOCTYPE html>
-        <html lang='es'>
-        <head>
-            <meta charset='UTF-8'>
-            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-            <link rel='stylesheet' href='../../libs/bootstrap-5.3.0-dist (1)/bootstrap-5.3.0-dist/css/bootstrap.css'>
-            <link rel='stylesheet' href='../../Statics/styles/servidor-creador.css'>
-            <script src='../js/servidor-creador.js'></script>
-            <title>Document</title>
-        </head>
         <body>
             <br>
-            <header>
-                <!--<nav class='navbar navbar-expand-lg bg-body-tertiary'>
-                    <div id='logos'>
-                        <img id='P6' src='../../statics/media/EscudoP6.jpg' alt='Escudo de la P6'></img>
-                        <img id='unam' src='../../statics/media/EscudoUNAM.jpg' alt='Escudo de la UNAM'></img>
-                    </div>
-                    <div class='container-fluid' class='Elementos Barra' >
-                        <div class='navbar-brand'></div>
-                        <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-                        <span class='navbar-toggler-icon'></span>
-                        </button>
-                        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-                        <br><br>
-                        <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
-                            <li class='nav-item'>
-                                <button id='pfp' class='nav'></button>
-                            </li>
-                            <br>
-                            <li class='nav-item'>
-                                <button id='paginaPrincipal' class='nav'>Página Principal</button>
-                            </li>
-                            <br>
-                            <li class='nav-item'>
-                                <button id='Ventas' class='nav'>Ventas</button>
-                            </li>
-                            <br>
-                            <li class='nav-item'>
-                                <button id='ObjetosPerdidos' class='nav'>Objetos Perdidos</button>
-                            </li>
-                            <br>
-                            <li>
-                                <button id='ComunidadP6' class='nav'>Comunidad 
-                            </li>
-                        </ul>
-                        </div>
-                    </div>
-                </nav>-->
-            </header>
             <main>
                 <img id='PortadaServer' src=".$info_club["Portada"]." alt='Portada del servidor'></img>
                 <img id='pfpServer' src=".$info_club["PFP"]." alt='Foto de perfil del servidor'></img>
