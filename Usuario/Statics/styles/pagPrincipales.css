@@ -76,6 +76,8 @@ input{
     background-color: #5796BA;
 }
 .coincidencia{
+    padding: 0.3rem 0.5rem;
+    border-radius: 15px;
     background-color: gray;
 }
 #crear{

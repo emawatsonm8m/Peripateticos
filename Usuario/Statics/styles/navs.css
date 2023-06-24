@@ -35,11 +35,14 @@ nav{
     gap: 2em;
 }
 .fotoUsuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 4em;
     width: 4em;
     border-radius: 50%;
     background-color: #366372;
-
+    overflow: hidden;
     gap: 2em;
 }
 

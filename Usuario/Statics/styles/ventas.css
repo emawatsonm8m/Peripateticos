@@ -111,6 +111,14 @@ h3
 {
     scale: 1.08;
 }
+#perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+}
 
 
 p
