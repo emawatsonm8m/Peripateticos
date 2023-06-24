@@ -1,113 +1,197 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
+-- MariaDB dump 10.19  Distrib 10.4.28-MariaDB, for Win64 (AMD64)
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 24-06-2023 a las 00:50:49
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: Proyecto1
+-- ------------------------------------------------------
+-- Server version	10.4.28-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Base de datos: `proyecto1`
+-- Table structure for table `club`
 --
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `club`
---
-
+DROP TABLE IF EXISTS `club`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `club` (
-  `ID_Club` int(11) NOT NULL,
+  `ID_Club` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Usuario` int(11) NOT NULL,
   `Nombre` varchar(255) NOT NULL,
   `Descripcion` varchar(500) NOT NULL,
   `Reglas` varchar(500) NOT NULL,
   `Tipo` varchar(255) NOT NULL,
   `Proposito` varchar(500) NOT NULL,
-  `Foto` varchar(255) DEFAULT NULL
+  `PFP` varchar(255) DEFAULT NULL,
+  `Portada` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID_Club`),
+  KEY `ID_Usuario` (`ID_Usuario`),
+  CONSTRAINT `club_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `comentario`
+-- Dumping data for table `club`
 --
 
+LOCK TABLES `club` WRITE;
+/*!40000 ALTER TABLE `club` DISABLE KEYS */;
+/*!40000 ALTER TABLE `club` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `comentario`
+--
+
+DROP TABLE IF EXISTS `comentario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `comentario` (
-  `ID_Comentario` int(11) NOT NULL,
+  `ID_Comentario` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Club` int(11) NOT NULL,
   `ID_Usuario` int(11) NOT NULL,
-  `Comentario` varchar(255) DEFAULT NULL
+  `Comentario` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID_Comentario`),
+  KEY `ID_Club` (`ID_Club`),
+  KEY `ID_Usuario` (`ID_Usuario`),
+  CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`ID_Club`) REFERENCES `club` (`ID_Club`),
+  CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `festividades`
+-- Dumping data for table `comentario`
 --
 
+LOCK TABLES `comentario` WRITE;
+/*!40000 ALTER TABLE `comentario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `comentario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `festividades`
+--
+
+DROP TABLE IF EXISTS `festividades`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `festividades` (
-  `ID_Festividades` int(11) NOT NULL,
+  `ID_Festividades` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Mes` int(11) NOT NULL,
   `Dia` int(11) NOT NULL,
   `Año` int(11) NOT NULL,
-  `Festividades` varchar(500) DEFAULT NULL
+  `Festividades` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`ID_Festividades`),
+  KEY `ID_Mes` (`ID_Mes`),
+  CONSTRAINT `festividades_ibfk_1` FOREIGN KEY (`ID_Mes`) REFERENCES `mes` (`ID_Mes`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `mes`
+-- Dumping data for table `festividades`
 --
 
+LOCK TABLES `festividades` WRITE;
+/*!40000 ALTER TABLE `festividades` DISABLE KEYS */;
+/*!40000 ALTER TABLE `festividades` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mes`
+--
+
+DROP TABLE IF EXISTS `mes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `mes` (
-  `ID_Mes` int(11) NOT NULL,
-  `Mes` varchar(255) DEFAULT NULL
+  `ID_Mes` int(11) NOT NULL AUTO_INCREMENT,
+  `Mes` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID_Mes`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `miembros_club`
+-- Dumping data for table `mes`
 --
 
+LOCK TABLES `mes` WRITE;
+/*!40000 ALTER TABLE `mes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `miembros_club`
+--
+
+DROP TABLE IF EXISTS `miembros_club`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `miembros_club` (
-  `ID_Miembro` int(11) NOT NULL,
+  `ID_Miembro` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Usuario` int(11) DEFAULT NULL,
-  `ID_Club` int(11) DEFAULT NULL
+  `ID_Club` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID_Miembro`),
+  KEY `ID_Usuario` (`ID_Usuario`),
+  KEY `ID_Club` (`ID_Club`),
+  CONSTRAINT `miembros_club_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
+  CONSTRAINT `miembros_club_ibfk_2` FOREIGN KEY (`ID_Club`) REFERENCES `club` (`ID_Club`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `moderadores`
+-- Dumping data for table `miembros_club`
 --
 
+LOCK TABLES `miembros_club` WRITE;
+/*!40000 ALTER TABLE `miembros_club` DISABLE KEYS */;
+/*!40000 ALTER TABLE `miembros_club` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `moderadores`
+--
+
+DROP TABLE IF EXISTS `moderadores`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `moderadores` (
-  `ID_Moderadores` int(11) NOT NULL,
+  `ID_Moderadores` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Usuario` int(11) DEFAULT NULL,
-  `ID_Club` int(11) DEFAULT NULL
+  `ID_Club` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID_Moderadores`),
+  KEY `ID_Usuario` (`ID_Usuario`),
+  KEY `ID_Club` (`ID_Club`),
+  CONSTRAINT `moderadores_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
+  CONSTRAINT `moderadores_ibfk_2` FOREIGN KEY (`ID_Club`) REFERENCES `club` (`ID_Club`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `objeto`
+-- Dumping data for table `moderadores`
 --
 
+LOCK TABLES `moderadores` WRITE;
+/*!40000 ALTER TABLE `moderadores` DISABLE KEYS */;
+/*!40000 ALTER TABLE `moderadores` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `objeto`
+--
+
+DROP TABLE IF EXISTS `objeto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `objeto` (
-  `ID_Objeto` int(11) NOT NULL,
+  `ID_Objeto` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Usuario` int(11) NOT NULL,
   `ID_PuntosPrepa` int(11) NOT NULL,
   `NombreObjeto` varchar(255) NOT NULL,
@@ -115,17 +199,33 @@ CREATE TABLE `objeto` (
   `Descripcion` varchar(500) NOT NULL,
   `Recompensa` varchar(50) DEFAULT NULL,
   `Fecha` date NOT NULL,
-  `Estado` varchar(255) NOT NULL
+  `Estado` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID_Objeto`),
+  KEY `ID_Usuario` (`ID_Usuario`),
+  KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`),
+  CONSTRAINT `objeto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
+  CONSTRAINT `objeto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `producto`
+-- Dumping data for table `objeto`
 --
 
+LOCK TABLES `objeto` WRITE;
+/*!40000 ALTER TABLE `objeto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `objeto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `producto`
+--
+
+DROP TABLE IF EXISTS `producto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `producto` (
-  `ID_Producto` int(11) NOT NULL,
+  `ID_Producto` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Usuario` int(11) NOT NULL,
   `ID_PuntosPrepa` int(11) NOT NULL,
   `NombreProducto` varchar(255) NOT NULL,
@@ -135,60 +235,87 @@ CREATE TABLE `producto` (
   `Cantidad` int(11) NOT NULL,
   `FechaVenta` date NOT NULL,
   `Calificacion` int(11) NOT NULL,
-  `Horario` time DEFAULT NULL
+  `Horario` time DEFAULT NULL,
+  PRIMARY KEY (`ID_Producto`),
+  KEY `ID_Usuario` (`ID_Usuario`),
+  KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`),
+  CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
+  CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `puntosprepa`
+-- Dumping data for table `producto`
 --
 
+LOCK TABLES `producto` WRITE;
+/*!40000 ALTER TABLE `producto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `producto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `puntosprepa`
+--
+
+DROP TABLE IF EXISTS `puntosprepa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `puntosprepa` (
-  `ID_PuntosPrepa` int(11) NOT NULL,
+  `ID_PuntosPrepa` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(255) NOT NULL,
-  `Foto_Lugar` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `Foto_Lugar` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID_PuntosPrepa`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `puntosprepa`
+-- Dumping data for table `puntosprepa`
 --
 
-INSERT INTO `puntosprepa` (`ID_PuntosPrepa`, `Nombre`, `Foto_Lugar`) VALUES
-(1, 'Entrada', '../../Statics/media/puntosPrepa/entrada.jpg'),
-(2, 'Patio de Sextos', '../../Statics/media/puntosPrepa/sextos.jpg'),
-(3, 'Patio de Cuartos', '../../Statics/media/puntosPrepa/cuartos.jpg'),
-(4, 'Patio de Quintos', '../../Statics/media/puntosPrepa/quintos.jpg'),
-(5, 'Pulpo', '../../Statics/media/puntosPrepa/pulpo.jpg'),
-(6, 'Mesas', '../../Statics/media/puntosPrepa/mesas.jpg'),
-(7, 'Canchas', '../../Statics/media/puntosPrepa/canchas.jpg'),
-(8, 'Pimponeras', '../../Statics/media/puntosPrepa/pimpos.jpg'),
-(9, 'Los H', '../../Statics/media/puntosPrepa/h.jpg'),
-(10, 'Biblioteca', '../../Statics/media/puntosPrepa/biblio.jpg'),
-(11, 'Vestidores', '../../Statics/media/puntosPrepa/vestidores.jpg'),
-(13, 'MAPA', '../../Statics/media/puntosPrepa/mapa.jpg');
-
--- --------------------------------------------------------
+LOCK TABLES `puntosprepa` WRITE;
+/*!40000 ALTER TABLE `puntosprepa` DISABLE KEYS */;
+INSERT INTO `puntosprepa` VALUES (1,'Entrada','../../Statics/media/puntosPrepa/entrada.jpg'),(2,'Patio de Sextos','../../Statics/media/puntosPrepa/sextos.jpg'),(3,'Patio de Cuartos','../../Statics/media/puntosPrepa/cuartos.jpg'),(4,'Patio de Quintos','../../Statics/media/puntosPrepa/quintos.jpg'),(5,'Pulpo','../../Statics/media/puntosPrepa/pulpo.jpg'),(6,'Mesas','../../Statics/media/puntosPrepa/mesas.jpg'),(7,'Canchas','../../Statics/media/puntosPrepa/canchas.jpg'),(8,'Pimponeras','../../Statics/media/puntosPrepa/pimpos.jpg'),(9,'Los H','../../Statics/media/puntosPrepa/h.jpg'),(10,'Biblioteca','../../Statics/media/puntosPrepa/biblio.jpg'),(11,'Vestidores','../../Statics/media/puntosPrepa/vestidores.jpg'),(13,'MAPA','../../Statics/media/puntosPrepa/mapa.jpg');
+/*!40000 ALTER TABLE `puntosprepa` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Estructura de tabla para la tabla `respuestas`
+-- Table structure for table `respuestas`
 --
 
+DROP TABLE IF EXISTS `respuestas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `respuestas` (
-  `ID_Respuesta` int(11) NOT NULL,
+  `ID_Respuesta` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Comentario` int(11) NOT NULL,
   `ID_Usuario` int(11) NOT NULL,
-  `Respuesta` varchar(255) DEFAULT NULL
+  `Respuesta` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID_Respuesta`),
+  KEY `ID_Comentario` (`ID_Comentario`),
+  KEY `ID_Usuario` (`ID_Usuario`),
+  CONSTRAINT `respuestas_ibfk_1` FOREIGN KEY (`ID_Comentario`) REFERENCES `comentario` (`ID_Comentario`),
+  CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Dumping data for table `respuestas`
 --
 
+LOCK TABLES `respuestas` WRITE;
+/*!40000 ALTER TABLE `respuestas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `respuestas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usuario`
+--
+
+DROP TABLE IF EXISTS `usuario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuario` (
-  `ID_Usuario` int(11) NOT NULL,
+  `ID_Usuario` int(11) NOT NULL AUTO_INCREMENT,
   `Cuenta` int(11) DEFAULT NULL,
   `Nombre` varchar(255) NOT NULL,
   `Contraseña` varchar(255) NOT NULL,
@@ -196,231 +323,29 @@ CREATE TABLE `usuario` (
   `Instagram` varchar(255) NOT NULL,
   `Celular` bigint(10) NOT NULL,
   `Sal` varchar(255) DEFAULT NULL,
-  `Pim` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `Pim` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID_Usuario`),
+  UNIQUE KEY `Cuenta` (`Cuenta`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `usuario`
+-- Dumping data for table `usuario`
 --
 
-INSERT INTO `usuario` (`ID_Usuario`, `Cuenta`, `Nombre`, `Contraseña`, `Foto_Perfil`, `Instagram`, `Celular`, `Sal`, `Pim`) VALUES
-(1, 322100000, 'Prueba', 'prueba123', NULL, '', 0, NULL, NULL),
-(2, 322157000, 'Luana', 'b92ab7ea80e99ee043251a3186d1d3d87a0474a44c1ec50aeb98f2f908380ce7', NULL, '@tilin', 5529391270, '6492554b654ae', NULL);
+LOCK TABLES `usuario` WRITE;
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (1,322100000,'Prueba','prueba123',NULL,'',0,NULL,NULL),(2,322157000,'Luana','b92ab7ea80e99ee043251a3186d1d3d87a0474a44c1ec50aeb98f2f908380ce7',NULL,'@tilin',5529391270,'6492554b654ae',NULL),(3,111111111,'José Eduardo','139f1163f7d0900c77bdbd9bfb3220a9e828ef5885db476f3201f7ce9c6110b1','../../Statics/media/fotosPerfil/perfilVacio.png','@nose',5511493563,'64962a9b141d4',NULL);
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `club`
---
-ALTER TABLE `club`
-  ADD PRIMARY KEY (`ID_Club`),
-  ADD KEY `ID_Usuario` (`ID_Usuario`);
-
---
--- Indices de la tabla `comentario`
---
-ALTER TABLE `comentario`
-  ADD PRIMARY KEY (`ID_Comentario`),
-  ADD KEY `ID_Club` (`ID_Club`),
-  ADD KEY `ID_Usuario` (`ID_Usuario`);
-
---
--- Indices de la tabla `festividades`
---
-ALTER TABLE `festividades`
-  ADD PRIMARY KEY (`ID_Festividades`),
-  ADD KEY `ID_Mes` (`ID_Mes`);
-
---
--- Indices de la tabla `mes`
---
-ALTER TABLE `mes`
-  ADD PRIMARY KEY (`ID_Mes`);
-
---
--- Indices de la tabla `miembros_club`
---
-ALTER TABLE `miembros_club`
-  ADD PRIMARY KEY (`ID_Miembro`),
-  ADD KEY `ID_Usuario` (`ID_Usuario`),
-  ADD KEY `ID_Club` (`ID_Club`);
-
---
--- Indices de la tabla `moderadores`
---
-ALTER TABLE `moderadores`
-  ADD PRIMARY KEY (`ID_Moderadores`),
-  ADD KEY `ID_Usuario` (`ID_Usuario`),
-  ADD KEY `ID_Club` (`ID_Club`);
-
---
--- Indices de la tabla `objeto`
---
-ALTER TABLE `objeto`
-  ADD PRIMARY KEY (`ID_Objeto`),
-  ADD KEY `ID_Usuario` (`ID_Usuario`),
-  ADD KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`);
-
---
--- Indices de la tabla `producto`
---
-ALTER TABLE `producto`
-  ADD PRIMARY KEY (`ID_Producto`),
-  ADD KEY `ID_Usuario` (`ID_Usuario`),
-  ADD KEY `ID_PuntosPrepa` (`ID_PuntosPrepa`);
-
---
--- Indices de la tabla `puntosprepa`
---
-ALTER TABLE `puntosprepa`
-  ADD PRIMARY KEY (`ID_PuntosPrepa`);
-
---
--- Indices de la tabla `respuestas`
---
-ALTER TABLE `respuestas`
-  ADD PRIMARY KEY (`ID_Respuesta`),
-  ADD KEY `ID_Comentario` (`ID_Comentario`),
-  ADD KEY `ID_Usuario` (`ID_Usuario`);
-
---
--- Indices de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`ID_Usuario`),
-  ADD UNIQUE KEY `Cuenta` (`Cuenta`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `club`
---
-ALTER TABLE `club`
-  MODIFY `ID_Club` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `comentario`
---
-ALTER TABLE `comentario`
-  MODIFY `ID_Comentario` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `festividades`
---
-ALTER TABLE `festividades`
-  MODIFY `ID_Festividades` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `mes`
---
-ALTER TABLE `mes`
-  MODIFY `ID_Mes` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `miembros_club`
---
-ALTER TABLE `miembros_club`
-  MODIFY `ID_Miembro` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `moderadores`
---
-ALTER TABLE `moderadores`
-  MODIFY `ID_Moderadores` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `objeto`
---
-ALTER TABLE `objeto`
-  MODIFY `ID_Objeto` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `producto`
---
-ALTER TABLE `producto`
-  MODIFY `ID_Producto` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `puntosprepa`
---
-ALTER TABLE `puntosprepa`
-  MODIFY `ID_PuntosPrepa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT de la tabla `respuestas`
---
-ALTER TABLE `respuestas`
-  MODIFY `ID_Respuesta` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `ID_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `club`
---
-ALTER TABLE `club`
-  ADD CONSTRAINT `club_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`);
-
---
--- Filtros para la tabla `comentario`
---
-ALTER TABLE `comentario`
-  ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`ID_Club`) REFERENCES `club` (`ID_Club`),
-  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`);
-
---
--- Filtros para la tabla `festividades`
---
-ALTER TABLE `festividades`
-  ADD CONSTRAINT `festividades_ibfk_1` FOREIGN KEY (`ID_Mes`) REFERENCES `mes` (`ID_Mes`);
-
---
--- Filtros para la tabla `miembros_club`
---
-ALTER TABLE `miembros_club`
-  ADD CONSTRAINT `miembros_club_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
-  ADD CONSTRAINT `miembros_club_ibfk_2` FOREIGN KEY (`ID_Club`) REFERENCES `club` (`ID_Club`);
-
---
--- Filtros para la tabla `moderadores`
---
-ALTER TABLE `moderadores`
-  ADD CONSTRAINT `moderadores_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
-  ADD CONSTRAINT `moderadores_ibfk_2` FOREIGN KEY (`ID_Club`) REFERENCES `club` (`ID_Club`);
-
---
--- Filtros para la tabla `objeto`
---
-ALTER TABLE `objeto`
-  ADD CONSTRAINT `objeto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
-  ADD CONSTRAINT `objeto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`);
-
---
--- Filtros para la tabla `producto`
---
-ALTER TABLE `producto`
-  ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
-  ADD CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`ID_PuntosPrepa`) REFERENCES `puntosprepa` (`ID_PuntosPrepa`);
-
---
--- Filtros para la tabla `respuestas`
---
-ALTER TABLE `respuestas`
-  ADD CONSTRAINT `respuestas_ibfk_1` FOREIGN KEY (`ID_Comentario`) REFERENCES `comentario` (`ID_Comentario`),
-  ADD CONSTRAINT `respuestas_ibfk_2` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`);
-COMMIT;
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-06-24  0:18:12
