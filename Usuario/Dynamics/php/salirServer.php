@@ -12,7 +12,8 @@
     if(!$conexion){
         echo "No se puedo conectar la base";
     }else{
-        $sql = "DELETE FROM miembros_club WHERE ID_Usuario = ".$_SESSION["ID_Usuario"];
+        $ID_Club = (isset($_POST["ID_Club"]) && $_POST["ID_Club"] != "")? $_POST["ID_Club"] : false;
+        $sql = "DELETE FROM miembros_club WHERE ID_Club = $ID_Club AND ID_Usuario = ".$_SESSION["ID_Usuario"];
         $res = mysqli_query($conexion, $sql);
         $respuesta = array("mensaje" => "Has abandonado al club ".$_SESSION["Nombre"]);
         echo json_encode($respuesta);

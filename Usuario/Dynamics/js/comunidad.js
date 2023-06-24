@@ -21,6 +21,7 @@ window.addEventListener("load", ()=>{
     const cuadro2 = document.getElementById("cuadro2");
     const clubsito = document.getElementById("club");
     const contServidores = document.getElementById("contServidores");
+    const server = document.getElementById("server");
 
     crear.addEventListener("click", ()=>{
         window.location.href="./crear-servidor-vista.php";
@@ -38,7 +39,7 @@ window.addEventListener("load", ()=>{
             }).then ((datosJSON)=>{
                 resultados.innerHTML = "";
                 for (resultado of datosJSON){
-                    resultados.innerHTML += `<div class="coincidencia" data-id="${resultado.Nombre}">${resultado.Nombre}</div>`;
+                    resultados.innerHTML += `<div class="coincidencia" id="coincidencia" data-club="${resultado.ID_Club}" data-id="${resultado.Nombre}">${resultado.Nombre}</div>`;
                 }   
                 if(datosJSON.length == 0){
                     resultados.innerHTML = "No hay resultados";
@@ -58,7 +59,6 @@ window.addEventListener("load", ()=>{
             }).then((respuesta)=>{
                 return respuesta.json();
             }).then((datosJSON)=>{
-                // console.log(datosJSON)
                 for(let dato of datosJSON){
                     if(dato.portada){
                         portada.innerHTML = `
@@ -78,42 +78,50 @@ window.addEventListener("load", ()=>{
                     unirse.dataset.club = dato.ID_Club;
                 }
             })
+            let datosClub = new FormData();
+            datosClub.append("club", e.target.dataset.club)
+            fetch("./servExisto.php", {
+                method: "POST",
+                body: datosClub
+            }).then((respuesta)=>{
+                return respuesta.json();
+            }).then((datosJSON)=>{
+                if(datosJSON == false){
+                    salir.style.display="none";
+                    unirse.style.display="flex";
+                }else{
+                    unirse.style.display="none";
+                    salir.style.display="flex";
+                }
+            })
         }
     })
-    fetch("./servExisto.php")
-    .then((respuesta)=>{
-        return respuesta.json();
-    }).then((datosJSON)=>{
-        console.log(datosJSON);
-        if(datosJSON == false){
-            unirse.style.display="flex";
-            unirse.addEventListener("click", (e)=>{
-                unirse.style.display="none";
-                salir.style.display="flex";
-                let datosForm = new FormData();
-                datosForm.append("ID_Club", unirse.dataset.club)
-                fetch("./unirServer.php", {
-                    method: "POST",
-                    body: datosForm
-                }).then((respuesta)=>{
-                    return respuesta.json();
-                }).then((datosJSON)=>{
-                    alert(datosJSON.mensaje);
-                })
-                console.log(e.target);
-            })
-        }else{
-            salir.style.display="flex";
-            salir.addEventListener("click", ()=>{
-                unirse.style.display="flex";
-                salir.style.display="none";
-                fetch("./salirServer.php")
-                .then((respuesta)=>{
-                    return respuesta.json();
-                }).then((datosJSON)=>{
-                    alert(datosJSON.mensaje);
-                })
-            })
-        }
+    unirse.addEventListener("click", ()=>{
+        unirse.style.display="none";
+        salir.style.display="flex";
+        let datosForm = new FormData();
+        datosForm.append("ID_Club", unirse.dataset.club)
+        fetch("./unirServer.php", {
+            method: "POST",
+            body: datosForm
+        }).then((respuesta)=>{
+            return respuesta.json();
+        }).then((datosJSON)=>{
+            alert(datosJSON.mensaje);
+        })
+    })
+    salir.addEventListener("click", ()=>{
+        unirse.style.display="flex";
+        salir.style.display="none";
+        let datosForm = new FormData();
+        datosForm.append("ID_Club", unirse.dataset.club)
+        fetch("./salirServer.php",{
+            method: "POST",
+            body: datosForm
+        }).then((respuesta)=>{
+            return respuesta.json();
+        }).then((datosJSON)=>{
+            alert(datosJSON.mensaje);
+        })
     })
 })
