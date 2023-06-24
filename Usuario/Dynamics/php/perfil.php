@@ -45,7 +45,7 @@
                 <section id="Perfil">
                     <h1>Tu perfil</h1>
                     <div>
-                        <img src="'.$_SESSION["Foto_Perfil"].'" alt="FotoPerfil" class="fotito" class="img-fluid" id="fotitoPerfil">
+                        <img src="'.$_SESSION["Foto_Perfil"].'" alt="FotoPerfil" class="fotito" class="img-fluid" id="editFotitoPerfil">
                     </div>
                     <div class="info" class="form-control" id="oculto">
                         <input accept="image/*" type="file" name="arch" id="agregar">
