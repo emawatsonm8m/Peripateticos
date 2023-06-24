@@ -15,7 +15,7 @@ window.addEventListener("load", (e)=>{
     {
         const div = document.getElementById("producto");
         console.log(datosJSON);
-        console.log(datosJSON[0].Nombre);
+        // console.log(datosJSON[0].Nombre);
         //let datos=[datosJSON.Foto, datosJSON.Nombre];
         // for(dato of datosJSON){
         datosJSON.forEach(function(element)//despliega todos los divs con la info
@@ -39,7 +39,7 @@ window.addEventListener("load", (e)=>{
                 window.location.href="../php/objetoEspecifico.php";
             });
         const nuevo = document.getElementById("nuevo");
-        nuevo.addEventListener("click",(e)=>{window.location.href="../php/publicarObjeto.php";});//redirige a publicar un nuevo objeto 
+        nuevo.addEventListener("click",(e)=>{window.location.href="./publicarObjeto.php";});//redirige a publicar un nuevo objeto 
     });
 
 });

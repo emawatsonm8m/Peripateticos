@@ -18,11 +18,4 @@
         $cadenaSanitizada = htmlspecialchars($cadena);
         return ($cadenaSanitizada);
     }
-
-    function select($tabla , $valor, $columa, $columnas){
-        $peticion = mysqli_prepare("SELECT $columnas FROM $tabla WHERE $columa = ?");
-        mysqli_stmt_bind_param ($peticion, "s", $valor);
-        // mysqli_stmt_execute ($peticion);
-        $respuesta = $mysqli_fetch_assoc($mysqli_stmt_execute ($peticion));
-    }
 ?>
