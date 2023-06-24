@@ -32,7 +32,10 @@
                   <article class="pagRedireccion" id="objPerdidos">Objetos perdidos</article>
                   <article class="pagRedireccion" id="comunidad">Comunidad P6</article>
               </ul>
-              <?php echo '<article class="fotoUsuario" id="perfil"><img src="'.$_SESSION["Foto_Perfil"].'"></article>'?>
+              <?php echo ' 
+              <div>
+                  <img src="'.$_SESSION["Foto_Perfil"].'" alt="FotoPerfil" class="fotito" class="img-fluid" id="fotitoPerfil">
+              </div>'; ?>
           </div>
 </nav>
 

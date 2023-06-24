@@ -34,7 +34,13 @@ nav{
     background-color: #366372;
     gap: 2em;
 }
-.fotoUsuario{
+.fotito{
+    height: 4rem; 
+    width: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+/* .fotoUsuario{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +50,7 @@ nav{
     background-color: #366372;
     overflow: hidden;
     gap: 2em;
-}
+} */
 
 #navbarSupportedContent
 {

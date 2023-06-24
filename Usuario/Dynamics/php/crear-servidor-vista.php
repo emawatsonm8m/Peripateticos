@@ -28,7 +28,10 @@
                     <article class='pagRedireccion' id='ventas'>Ventas</article>
                     <article class='pagRedireccion' id='objPerdidos'>Objetos perdidos</article>
                     <article class='pagRedireccion' id='comunidad'>Comunidad P6</article>
-                </ul>
+                </ul> 
+                <div>
+                    <img src='".$_SESSION["Foto_Perfil"]."' alt='FotoPerfil' class='fotito' class='img-fluid' id='fotitoPerfil'>
+                </div>
                 <article class='fotoUsuario' id='perfil'><!--Foto de usuario BD--></article>
             </div>
         </nav>
