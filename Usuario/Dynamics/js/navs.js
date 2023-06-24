@@ -3,7 +3,7 @@ window.addEventListener("load", ()=>{
     const ventas = document.getElementById("ventas");
     const objPerdidos = document.getElementById("objPerdidos");
     const comunidad = document.getElementById("comunidad");
-    const perfil = document.getElementById("perfil");
+    const perfil = document.getElementById("fotitoPerfil");
     const perdi = document.getElementById("perder");
 
     principal.addEventListener("click", ()=>{
